@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Multimedia extends Model
 {
     use HasFactory;
-    protected $table = 'multimedia';
+    protected $table = 'multimedias';
 }
