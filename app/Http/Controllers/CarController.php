@@ -3,12 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Http\File;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\DB;
-use App\Models\model_upload;
+use App\Models\Car;
 
-class CarModelController extends Controller
+class CarController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,8 +16,8 @@ class CarModelController extends Controller
      */
     public function index()
     {
-        $model_upload = model_upload::All();
-        return view('show-all-models', ['model_uploads' => $model_upload, 'name' => 'Victoria']);
+        $cars = Car::All();
+        return view('show-all-models', ['cars' => $cars, 'name' => 'Victoria']);
     }
 
     /**
@@ -46,10 +45,10 @@ class CarModelController extends Controller
 
         //Store image in database
         
-        $model_upload = new model_upload;
-        $model_upload->model_name = $request->carModel;
-        $model_upload->model_path = $path;
-        $model_upload->save();
+        $car = new car;
+        $car->model_name = $request->carModel;
+        $car->model_path = $path;
+        $car->save();
         return redirect('/');
     }
 

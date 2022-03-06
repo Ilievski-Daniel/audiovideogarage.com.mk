@@ -65,13 +65,13 @@
         <div class="col-lg-12 text-center">
             <h2 class="section-title"></h2>
         </div>
-        @foreach ($model_uploads as $model_upload)
+        @foreach ($cars as $car)
         <div class="col-lg-3 col-sm-6 mb-4">
             <div class="card border-0 shadow rounded-xs pt-5 text-center">
                 <div class="card-body">
-                    <img src="{{ url('storage/app/'.$model_upload->model_path) }}" alt="Car Model photo"/>
-                    <h4 class="mt-4 mb-4 font-weight-bold">{{$model_upload->model_name}}</h4>
-                    <a href="/car-model/{{$model_upload->id}}" class="car-models-button">Избери</a>
+                    <img src="{{ url('storage/app/'.$car->model_path) }}" alt="Car Model photo"/>
+                    <h4 class="mt-4 mb-4 font-weight-bold">{{$car->model_name}}</h4>
+                    <a href="/car-model/{{$car->id}}" class="car-models-button">Избери</a>
                 </div>
             </div>
         </div>
