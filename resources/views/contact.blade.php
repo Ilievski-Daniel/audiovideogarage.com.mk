@@ -85,13 +85,14 @@
 						    <h6 class="mb-4"> За повеќе информации ќе Ве молиме да искористите еден од начините и да не исконтактирате.</h6>
 					    </div>
 					    <div class="hours">
-						    <h6 class="mt-4">Email:</h6>
+						    <h6 class="mt-4">Емаил адреса:</h6>
 						    <p> <a href="mailto:info@audiovideogarage.com.mk">
                 info@audiovideogarage.com.mk</a></p>
-                <h6 class="mt-4">Адреса:</h6>
-                <p> Скопје, Македонија</p>
-                <h6 class="mt-4">Телефонски број:</h6>
+                <h6 class="mt-4">Работиме во:</h6>
+                <p> Скопје, Охрид и Гостивар.</p>
+                <h6 class="mt-4">Телефонски броеви:</h6>
 						    <p class="margin-top"><a href="tel:077 640 203">077 640 203</a></p>
+                <p class="margin-top"><a href="tel:078 306 942">078 306 942</a></p>
 					    </div>
 					  </div>
 				  </div>
