@@ -44,7 +44,7 @@
               <a class="nav-link" href="/models"><strong> Сите модели</strong></a>
             </li>
             <li class="nav-item">
-              <a href="contact.html" class="btn btn-primary btn-style mr-2">Контакт</a>
+              <a href="/contact" class="btn btn-primary btn-style mr-2">Контакт</a>
             </li>
           </ul>
         <div class="mobile-position">
