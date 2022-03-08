@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('short_description');
             $table->text('long_description');
             $table->string('price');
+            $table->integer('featured');
             $table->timestamps();
         });
     }

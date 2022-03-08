@@ -136,25 +136,30 @@
         </div>
       </div>
   </section>
+
+
+  @if(isset($multimedias))
   <!-- /features-4 -->
   <section class="features-4">
     <div class="features4-block py-5">
       <div class="container py-lg-4">
         <div class="title-content text-center mb-lg-5 mt-4">
-          <h6 class="sub-title">Why Choose Us</h6>
-          <h3 class="hny-title">Great car service</h3>
-          <p class="fea-para">Lorem illum facere aperiam consectetur adipisicing elit</p>
+          <h6 class="sub-title">Известување</h6>
+          <h3 class="hny-title">Модели на попуст</h3>
         </div>
+        
         <div class="row features4-grids text-left mt-lg-4">
+          @foreach($multimedias as $multimedia)
           <div class="col-lg-3 col-md-6 features4-grid mt-4">
             <div class="features4-grid-inn">
               <div class="img-featured">
                 <div class="ch-item ch-img-1">
                   <div class="ch-info-wrap">
                     <div class="ch-info">
-                      <div class="ch-info-front ch-img-1"></div>
+                      {{-- The multimedia->id is for a joke here just to have different image numbers xD --}}
+                      <div class="ch-info-front ch-img-{{$multimedia->id}}"></div>
                       <div class="ch-info-back">
-                        <h4>Carserving</h4>
+                        <h4>{{$multimedia->price}} ден</h4>
                       </div>
                     </div>
                   </div>
@@ -162,83 +167,24 @@
               </div>
 
               <div class="features4-rightinfo">
-                <h5><a href="#URL">Tire and wheel</a></h5>
-                <p>Lorem ipsum dolor sit amet,Ea consequuntur illum facere.</p>
-
+                <h5><a href="#">{{$multimedia->name}}</a></h5>
+                <p>{{$multimedia->short_description}}</p>
+                <a href="#" class="btn btn-style btn-primary mt-md-2 mt-2">Избери</a>
               </div>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6 features4-grid mt-4">
-            <div class="features4-grid-inn">
-              <div class="img-featured">
-                <div class="ch-item ch-img-2">
-                  <div class="ch-info-wrap">
-                    <div class="ch-info">
-                      <div class="ch-info-front ch-img-2"></div>
-                      <div class="ch-info-back">
-                        <h4>Carserving</h4>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="features4-rightinfo">
-                <h5><a href="#URL">
-                    Electrical system</a></h5>
-                <p>Lorem ipsum dolor sit amet,Ea consequuntur illum facere.</p>
-
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 features4-grid mt-4">
-            <div class="features4-grid-inn">
-              <div class="img-featured">
-                <div class="ch-item ch-img-3">
-                  <div class="ch-info-wrap">
-                    <div class="ch-info">
-                      <div class="ch-info-front ch-img-3"></div>
-                      <div class="ch-info-back">
-                        <h4>Carserving</h4>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="features4-rightinfo">
-                <h5><a href="#URL">
-                    System service</a></h5>
-                <p>Lorem ipsum dolor sit amet,Ea consequuntur illum facere.</p>
-
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 features4-grid mt-4">
-            <div class="features4-grid-inn">
-              <div class="img-featured">
-                <div class="ch-item ch-img-4">
-                  <div class="ch-info-wrap">
-                    <div class="ch-info">
-                      <div class="ch-info-front ch-img-4"></div>
-                      <div class="ch-info-back">
-                        <h4>Carserving</h4>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="features4-rightinfo">
-                <h5><a href="#URL">
-                    Engine diagnostics</a></h5>
-                <p>Lorem ipsum dolor sit amet,Ea consequuntur illum facere.</p>
-
-              </div>
-            </div>
-          </div>
+          @endforeach
         </div>
       </div>
     </div>
-    </div>
   </section>
+  @else 
+  <section class="features-4">
+    <center><h6 class="sub-title">Известување</h6></center>
+    <center><h3 class="hny-title">Немаме модели на попуст во моментот!</h3></center>
+    <br><br>
+  </section>
+  @endif
   <footer class="w3l-footer-66">
     <section class="footer-inner-main">
       <div class="below-section">
