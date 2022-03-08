@@ -17,8 +17,8 @@ return new class extends Migration
             $table->id();
             $table->foreignId('car_id')
                     ->constrained()
-                    ->onDelete('cascade')
-                    ->onUpdate('cascade');
+                    ->onUpdate('cascade')
+                    ->onDelete('cascade');
             $table->string('name');
             $table->string('short_description');
             $table->text('long_description');
