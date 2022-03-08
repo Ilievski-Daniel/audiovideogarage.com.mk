@@ -66,18 +66,28 @@
             <h2 class="section-title"></h2>
         </div>
         @foreach ($multimedias as $multimedia)
+        @if (is_numeric($multimedia->id))
         <div class="col-lg-3 col-sm-6 mb-4">
-            <div class="card border-0 shadow rounded-xs pt-5 text-center">
-                <div class="card-body">
-                    <img src="{{ url('storage/app/'. $multimedia->id) }}" alt="Car Model photo"/>
-                    <h4 class="mt-4 mb-4 font-weight-bold">{{$multimedia->name}}</h4>
-                    <p class="mt-2 mb-2">{{$multimedia->short_description}}</p>
-                    <p class="mt-2 mb-4">{{$multimedia->price}}</p>
-                    <a href="/car-model/{{$multimedia->id}}" class="car-models-button">Избери</a>
-                </div>
+          <div class="card border-0 shadow rounded-xs pt-5 text-center">
+            <div class="card-body">
+                <img src="{{ url('storage/app/'. $multimedia->id) }}" alt="Car Model photo"/>
+                <h4 class="mt-4 mb-4 font-weight-bold">{{$multimedia->name}}</h4>
+                <p class="mt-2 mb-2">{{$multimedia->short_description}}</p>
+                <p class="mt-2 mb-4">{{$multimedia->price}}</p>
+                <a href="/car-multimedia/{{$multimedia->id}}" class="car-models-button">Избери</a>
+                @php 
+                $key = 1
+                @endphp
             </div>
+          </div>
         </div>
+        @endif
         @endforeach
+
+        @if (!isset($key))
+        <script> alert('Известување! Не се достапни податоци за овој модел, ве молиме одберете еден од понудените модели.'); 
+        window.location.href='/models';</script>
+        @endif
     </div>
   </div>
 </body>

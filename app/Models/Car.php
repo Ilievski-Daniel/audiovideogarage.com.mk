@@ -7,5 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Car extends Model
 {
+    public function multimedia(){
+        return $this->hasMany(Multimedia::class);
+    }
     use HasFactory;
 }
