@@ -5,7 +5,9 @@ use App\Http\Controllers\CarController;
 use App\Http\Controllers\MultimediaController;
 
 Route::view('login','login');
+Route::view('add-multimedia','add-multimedia');
 Route::get('/',[MultimediaController::class, 'index']);
+// Route::get('/',[MultimediaController::class, 'insert']);
 Route::view('add-model','add-model');
 Route::view('contact','contact');
 Route::get('models',[CarController::class, 'index']);
