@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CarController; 
 use App\Http\Controllers\MultimediaController;
 
-
+Route::view('login','login');
 Route::get('/',[MultimediaController::class, 'index']);
 Route::view('add-model','add-model');
 Route::view('contact','contact');
