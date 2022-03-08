@@ -15,6 +15,10 @@ return new class extends Migration
     {
         Schema::create('multimedias', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('car_id')
+                    ->constrained()
+                    ->onDelete('cascade')
+                    ->onUpdate('cascade');
             $table->string('name');
             $table->string('short_description');
             $table->text('long_description');
