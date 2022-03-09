@@ -66,59 +66,53 @@
             <div class="col-lg-10 col-md-12 ">
                 <div class="card shadow-lg card-1">
                     <div class="card-body inner-card">
-                        <form action="add-model" method="post" enctype="multipart/form-data">
-                            @csrf
-                            <div class="row justify-content-center">
-                                <div class="col-lg-6 col-md-6 col-sm-6">
-                                    <div class="form-group ">
-                                        <label>Име на продукт</label>
-                                        <input type="text" name="name" class="form-control rounded" placeholder="Името на продуктот.." required> 
-                                    </div>
-                                </div>
-                                <div class="row justify-content-center">
-                                    <div class="col-md-120 col-lg-12 col-12">
-                                        <div class="form-group files">
-                                            <label class="form-label">Избери слика</label>
-                                            <input type="file" name="file" class="form-control rounded" required>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div style="margin-left: 0px; margin-right: 0px;" class="col-lg-6 col-md-6 col-sm-6  justify-content-center">
-                                    <div class="form-group ">
-                                        <label>Цена</label>
-                                        <input type="text" name="price" class="form-control rounded" placeholder="Цена на производ.." required> 
-                                    </div>
-                                </div>
-                                <div style="margin-left: 0px; margin-right: 0px;" class="col-lg-6 col-md-6 col-sm-6  justify-content-center ">
-                                    <div class="form-group ">
-                                        <label>Краток опис</label>
-                                        <input type="text" name="short_description" class="form-control rounded" placeholder="Кратко објаснување.." required> 
-                                    </div>
-                                </div>
-                                <div style="margin-left: 0px; margin-right: 0px;" class="col-lg-12 col-md-12 col-sm-12  justify-content-center ">
-                                    <div class="form-group ">
-                                        <label>Долг опис</label>
-                                        <input type="text" name="long_description" class="form-control rounded" placeholder="Подетално објаснување.." required> 
-                                    </div>
-                                </div>
-
-                                <div class="col-md-12 col-lg-12 col-auto ml-2"><input type="submit" class="btn btn-primary rounded" value="Постави нов модел"></div>
-                                
-                                
-                                <h6> <br><br>1. Треба да се смени од input type="text" во тој другиот инпут што ќе му даде
-                                    <br>
-                                    можност да пишува нели повеќе редови за долгиот опис на продуктот.
-                                    <br><br>
-                                </h6>
-                                <h6>2. Треба да се израмнат сите овие веќе направени inputs, да си бидат во иста линија. 
-                                    <br>Како на пример што е исто во 2 и 3 ред. (Првиот е нешто не во ред).<br><br></h6>
-                                <br>
-                                <br>
-                                <h6>3. Треба да се додаде checkout копче кое што ќе се штиклира и отштиклира и ќе служи <br>
-                                    за истакнување на производите кои што се на попоуст!
-                                </h6>
+                      <form action="add-model" method="post" enctype="multipart/form-data">
+                        <div class="row">
+                          <div class="col-6">
+                            <label>Име на продукт</label>
+                            <input type="text" name="name" class="form-control rounded" placeholder="Името на продуктот.." required> 
+                          </div>
+                          <div class="col-6">
+                            <label class="form-label">Избери слика</label>
+                            <input type="file" name="file" class="form-control rounded" required>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-6">
+                            <label>Цена</label>
+                            <input type="text" name="price" class="form-control rounded" placeholder="Цена на производ.." required> 
+                          </div>
+                          <div class="col-6">
+                            <label>Краток опис</label>
+                            <input type="text" name="short_description" class="form-control rounded" placeholder="Кратко објаснување.." required> 
+                          </div>
+                        </div>
+                         <div class="row">
+                           <div class="col-6">
+                             <label>Одберете модел</label>
+                            <select class="form-control">
+                              <option value="#">1</option>
+                              <option value="#">2</option>
+                              <option value="#">3</option>
+                            </select>
+                            <label style="margin-top: 13.5px;">Дали продуктот е на попуст?</label>
+                            <select class="form-control">
+                              <option value="#">Не</option>
+                              <option value="#">Да</option>
+                            </select>
+           
+                           </div>
+                           <div class="col-6">
+                             <label>Долг опис</label>
+                             <textarea class="w-100" rows="5" placeholder="Внесете подолго објаснување"></textarea>
                             </div>
-                        </form> 
+                         </div>
+                         <div class="row">
+                           <div class="col-12">
+                            <input type="submit" class="btn btn-primary rounded mt-4" value="Постави нов модел">
+                           </div>
+                         </div>
+                      </form>
                     </div>
                 </div>
             </div>
@@ -126,159 +120,159 @@
     </div>
 </div>
 <footer class="w3l-footer-66">
-    <section class="footer-inner-main">
-      <div class="below-section">
-        <div class="container">
-          <div class="copyright-footer">
-            <div class="columns">
-              <p>© 2020 Audio Video Garage. All rights reserved | Powered by <a href="https://webmak.mk">WebMak</a></p>
-            </div>
+  <section class="footer-inner-main">
+    <div class="below-section">
+      <div class="container">
+        <div class="copyright-footer">
+          <div class="columns">
+            <p>© 2020 Audio Video Garage. All rights reserved | Powered by <a href="https://webmak.mk">WebMak</a></p>
           </div>
         </div>
-  
-      <button onclick="topFunction()" id="movetop" title="Go to top">
-        <span class="fa fa-long-arrow-up" aria-hidden="true"></span>
-      </button>
-      <script>
-        // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function () {
-          scrollFunction()
-        };
-  
-        function scrollFunction() {
-          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            document.getElementById("movetop").style.display = "block";
-          } else {
-            document.getElementById("movetop").style.display = "none";
-          }
+      </div>
+
+    <button onclick="topFunction()" id="movetop" title="Go to top">
+      <span class="fa fa-long-arrow-up" aria-hidden="true"></span>
+    </button>
+    <script>
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction()
+      };
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          document.getElementById("movetop").style.display = "block";
+        } else {
+          document.getElementById("movetop").style.display = "none";
         }
-  
-        // When the user clicks on the button, scroll to the top of the document
-        function topFunction() {
-          document.body.scrollTop = 0;
-          document.documentElement.scrollTop = 0;
-        }
-      </script>
-      <!-- /move top -->
-  
-    </section>
-  </footer>
-  <script src="/js/jquery-3.3.1.min.js"></script>
-  <script src="/js/jquery.magnific-popup.min.js"></script>
-  <script>
-  $(document).ready(function () {
-    $('.popup-with-zoom-anim').magnificPopup({
-      type: 'inline',
-  
-      fixedContentPos: false,
-      fixedBgPos: true,
-  
-      overflowY: 'auto',
-  
-      closeBtnInside: true,
-      preloader: false,
-  
-      midClick: true,
-      removalDelay: 300,
-      mainClass: 'my-mfp-zoom-in'
-    });
-  
-    $('.popup-with-move-anim').magnificPopup({
-      type: 'inline',
-  
-      fixedContentPos: false,
-      fixedBgPos: true,
-  
-      overflowY: 'auto',
-  
-      closeBtnInside: true,
-      preloader: false,
-  
-      midClick: true,
-      removalDelay: 300,
-      mainClass: 'my-mfp-slide-bottom'
-    });
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+    <!-- /move top -->
+
+  </section>
+</footer>
+<script src="/js/jquery-3.3.1.min.js"></script>
+<script src="/js/jquery.magnific-popup.min.js"></script>
+<script>
+$(document).ready(function () {
+  $('.popup-with-zoom-anim').magnificPopup({
+    type: 'inline',
+
+    fixedContentPos: false,
+    fixedBgPos: true,
+
+    overflowY: 'auto',
+
+    closeBtnInside: true,
+    preloader: false,
+
+    midClick: true,
+    removalDelay: 300,
+    mainClass: 'my-mfp-zoom-in'
   });
-  </script>
-  <!--//-->
-  <script src="/js/theme-change.js"></script>
-  <script src="/js/owl.carousel.js"></script>
-  <!-- script for banner slider-->
-  <script>
-    $(document).ready(function () {
-      $('.owl-one').owlCarousel({
-        loop: true,
-        margin: 0,
-        nav: false,
-        responsiveClass: true,
-        autoplay: false,
-        autoplayTimeout: 5000,
-        autoplaySpeed: 1000,
-        autoplayHoverPause: false,
-        responsive: {
-          0: {
-            items: 1,
-            nav: false
-          },
-          480: {
-            items: 1,
-            nav: false
-          },
-          667: {
-            items: 1,
-            nav: true
-          },
-          1000: {
-            items: 1,
-            nav: true
-          }
+
+  $('.popup-with-move-anim').magnificPopup({
+    type: 'inline',
+
+    fixedContentPos: false,
+    fixedBgPos: true,
+
+    overflowY: 'auto',
+
+    closeBtnInside: true,
+    preloader: false,
+
+    midClick: true,
+    removalDelay: 300,
+    mainClass: 'my-mfp-slide-bottom'
+  });
+});
+</script>
+<!--//-->
+<script src="/js/theme-change.js"></script>
+<script src="/js/owl.carousel.js"></script>
+<!-- script for banner slider-->
+<script>
+  $(document).ready(function () {
+    $('.owl-one').owlCarousel({
+      loop: true,
+      margin: 0,
+      nav: false,
+      responsiveClass: true,
+      autoplay: false,
+      autoplayTimeout: 5000,
+      autoplaySpeed: 1000,
+      autoplayHoverPause: false,
+      responsive: {
+        0: {
+          items: 1,
+          nav: false
+        },
+        480: {
+          items: 1,
+          nav: false
+        },
+        667: {
+          items: 1,
+          nav: true
+        },
+        1000: {
+          items: 1,
+          nav: true
         }
-      })
+      }
     })
-  </script>
-  <!-- //script -->
-  <!-- disable body scroll which navbar is in active -->
-  <script>
-    $(function () {
-      $('.navbar-toggler').click(function () {
-        $('body').toggleClass('noscroll');
-      })
-    });
-  </script>
-  <!-- disable body scroll which navbar is in active -->
+  })
+</script>
+<!-- //script -->
+<!-- disable body scroll which navbar is in active -->
+<script>
+  $(function () {
+    $('.navbar-toggler').click(function () {
+      $('body').toggleClass('noscroll');
+    })
+  });
+</script>
+<!-- disable body scroll which navbar is in active -->
+
+<!-- stats number counter-->
+<script src="/js/jquery.waypoints.min.js"></script>
+<script src="/js/jquery.countup.js"></script>
+<script>
+  $('.counter').countUp();
+</script>
+<!-- //stats number counter -->
+<!--/MENU-JS-->
+<script>
   
-  <!-- stats number counter-->
-  <script src="/js/jquery.waypoints.min.js"></script>
-  <script src="/js/jquery.countup.js"></script>
-  <script>
-    $('.counter').countUp();
-  </script>
-  <!-- //stats number counter -->
-  <!--/MENU-JS-->
-  <script>
-    
-    var scroll = $(window).scrollTop();
-    $("#site-header").addClass("nav-fixed");
-  
-    //Main navigation Active Class Add Remove
-    $(".navbar-toggler").on("click", function () {
-      $("header").toggleClass("active");
-    });
-    $(document).on("ready", function () {
+  var scroll = $(window).scrollTop();
+  $("#site-header").addClass("nav-fixed");
+
+  //Main navigation Active Class Add Remove
+  $(".navbar-toggler").on("click", function () {
+    $("header").toggleClass("active");
+  });
+  $(document).on("ready", function () {
+    if ($(window).width() > 991) {
+      $("header").removeClass("active");
+    }
+    $(window).on("resize", function () {
       if ($(window).width() > 991) {
         $("header").removeClass("active");
       }
-      $(window).on("resize", function () {
-        if ($(window).width() > 991) {
-          $("header").removeClass("active");
-        }
-      });
     });
-  </script>
-  <!--//MENU-JS-->
-  
-  <script src="/js/bootstrap.min.js"></script>
-  
-  </body>
-  
-  </html>
+  });
+</script>
+<!--//MENU-JS-->
+
+<script src="/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
