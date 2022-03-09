@@ -67,7 +67,7 @@
                   <div class="banner-info-bg">
                     <h5>Audio Video Garage.</h5>
                     <div class="banner-buttons">
-                      <a class="btn btn-style btn-primary" href="about.html">Сите модели</a>
+                      <a class="btn btn-style btn-primary" href="/models">Сите модели</a>
                       <a href="#small-dialog" class="popup-with-zoom-anim play-view">
                         <span class="video-play-icon">
                           <span class="fa fa-play"></span>
@@ -93,7 +93,7 @@
                   <div class="banner-info-bg">
                     <h5>Audio Video Garage.</h5>
                     <div class="banner-buttons">
-                      <a class="btn btn-style btn-primary" href="about.html">Контакт</a>
+                      <a class="btn btn-style btn-primary" href="/contact">Контакт</a>
                       <a href="#small-dialog" class="popup-with-zoom-anim play-view">
                         <span class="video-play-icon">
                           <span class="fa fa-play"></span>
