@@ -15,7 +15,7 @@
   <header id="site-header" class="fixed-top">
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-light">
-        <h1><a class="navbar-brand" href="index.html">
+        <h1><a class="navbar-brand" href="/">
             Audio<span>Video</span>Garage
           </a></h1>
         <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -150,7 +150,7 @@
         
         <div class="row features4-grids text-left mt-lg-4">
           @foreach($multimedias as $multimedia)
-          <div class="col-lg-3 col-md-6 features4-grid mt-4">
+          <div class="col-lg-3 col-md-6 col-sm-6 features4-grid mt-4">
             <div class="features4-grid-inn">
               <div class="img-featured">
                 <div class="ch-item ch-img-1">
