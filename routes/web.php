@@ -13,3 +13,6 @@ Route::view('contact','contact');
 Route::get('models',[CarController::class, 'index']);
 Route::post('add-model',[CarController::class, 'store']);
 Route::get('car-model/{id}',[MultimediaController::class, 'show']);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
