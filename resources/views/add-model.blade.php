@@ -39,7 +39,7 @@
               <a class="nav-link" href="/#about"><strong>За нас</strong></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="services.html"><strong>Модели на попуст</strong></a>
+              <a class="nav-link" href="/#featured"><strong>Модели на попуст</strong></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/models"><strong> Сите модели</strong></a>

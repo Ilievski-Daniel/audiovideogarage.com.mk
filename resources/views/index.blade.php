@@ -33,7 +33,7 @@
               <a class="nav-link" href="/#about"><strong>За нас</strong></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="services.html"><strong>Модели на попуст</strong></a>
+              <a class="nav-link" href="/#featured"><strong>Модели на попуст</strong></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/models"><strong> Сите модели</strong></a>
@@ -140,7 +140,7 @@
 
   @if(isset($multimedias))
   <!-- /features-4 -->
-  <section class="features-4">
+  <section class="features-4" id="featured">
     <div class="features4-block py-5">
       <div class="container py-lg-4">
         <div class="title-content text-center mb-lg-5 mt-4">
