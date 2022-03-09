@@ -20,7 +20,7 @@
   <header id="site-header" class="fixed-top">
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-light">
-        <h1><a class="navbar-brand" href="index.html">
+        <h1><a class="navbar-brand" href="/">
             Audio<span>Video</span>Garage
           </a></h1>
         <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNav"
