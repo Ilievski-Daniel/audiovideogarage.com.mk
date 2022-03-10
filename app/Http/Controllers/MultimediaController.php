@@ -24,6 +24,14 @@ class MultimediaController extends Controller
         ->with('multimedias', $multimedias);
     }
 
+    public function showMultimedia($id)
+    {
+        $multimedias = Multimedia::where('id', $id)
+        ->get();
+        return view('car-multimedia')
+        ->with('multimedias', $multimedias);
+    }
+
     public function store(Request $request)
     {
         // $input = $request->all();

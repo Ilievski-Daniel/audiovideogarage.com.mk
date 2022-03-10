@@ -60,7 +60,7 @@
     </div>
   </header>
   <!--/header-->
-  <div class="container">
+  <div class="container mt-5 mt-md-2">
     <div class="row">
         <div class="col-lg-12 text-center">
             <h2 class="section-title"></h2>

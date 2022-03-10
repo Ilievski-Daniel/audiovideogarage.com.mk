@@ -60,7 +60,7 @@
     </div>
   </header>
   <!--/header-->
-  <div class="container">
+  <div class="container mt-5 mt-md-2">
     <div class="row">
         <div class="col-lg-12 text-center">
             <h2 class="section-title"></h2>
@@ -72,7 +72,7 @@
             <div class="card-body">
                 {{-- <img src="{{asset('/storage/images/multimedias/' . $car->image)}}" alt="Car Model photo"/> --}}
                 <h4 class="mt-4 mb-4 font-weight-bold">{{$multimedia->name}}</h4>
-                <p class="mt-2 mb-2">{{$multimedia->short_description}}</p>
+                <p class="mt-2 mb-4">{{$multimedia->short_description}}</p>
                 <p class="mt-2 mb-4">{{$multimedia->price}}</p>
                 <a href="/car-multimedia/{{$multimedia->id}}" class="car-models-button">Избери</a>
                 @php 
