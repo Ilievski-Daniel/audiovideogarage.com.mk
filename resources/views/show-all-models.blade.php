@@ -69,7 +69,7 @@
         <div class="col-lg-3 col-sm-6 mb-4">
             <div class="card border-0 shadow rounded-xs pt-5 text-center">
                 <div class="card-body">
-                    <img src="{{ url('storage/app/'.$car->model_path) }}" alt="Car Model photo"/>
+                    <img height="80vh" src="{{asset('/storage/images/cars/' . $car->image)}}" alt="Car Model photo"/>
                     <h4 class="mt-4 mb-4 font-weight-bold">{{$car->model_name}}</h4>
                     <a href="/car-model/{{$car->id}}" class="car-models-button">Избери</a>
                 </div>

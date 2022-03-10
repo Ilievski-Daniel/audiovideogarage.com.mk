@@ -79,7 +79,7 @@
                                     <div class="col-md-12 col-lg-12 col-12">
                                         <div class="form-group files">
                                             <label class="form-label">Избери слика</label>
-                                            <input type="file" name="file" class="form-control rounded" required>
+                                            <input type="file" name="image" class="form-control rounded" required>
                                         </div>
                                     </div>
                                 </div>

@@ -38,17 +38,28 @@ class CarController extends Controller
      */
     public function store(Request $request)
     { 
-        //Store image in storage/images
-        $file = $request->file('file');
-        $name = $file->hashName();
-        $path = $request->file('file')->storeAs('images', $name);
+        $input = $request->all();
+        if($request->hasFile('image')){
+            $destination_path = 'public/images/cars';
+            $image = $request->file('image');
+            $image_name = $image->getClientOriginalName();
+            $path = $request->file('image')->storeAs($destination_path, $image_name);
 
-        //Store image in database
-        
+            $input['image'] = $image_name;
+        }
+
         $car = new car;
         $car->model_name = $request->carModel;
-        $car->model_path = $path;
+        $car->image = $image_name;
         $car->save();
+        
+        //Store image in storage/images
+        // $file = $request->file('file');
+        // $name = $file->hashName();
+        // $path = $request->file('file')->storeAs('images', $name);
+
+        // //Store image in database
+        
         return redirect('/');
     }
 
