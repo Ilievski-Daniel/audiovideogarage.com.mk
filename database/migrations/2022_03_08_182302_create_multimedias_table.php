@@ -24,6 +24,7 @@ return new class extends Migration
             $table->text('long_description');
             $table->string('price');
             $table->integer('featured');
+            $table->string('image');
             $table->timestamps();
         });
     }

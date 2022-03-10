@@ -66,25 +66,26 @@
             <div class="col-lg-10 col-md-12 ">
                 <div class="card shadow-lg card-1">
                     <div class="card-body inner-card">
-                      <form action="add-model" method="post" enctype="multipart/form-data">
+                      <form action="add-multimedia" method="post" enctype="multipart/form-data">
+                        @csrf
                         <div class="row">
                           <div class="col-6">
                             <label>Име на продукт</label>
-                            <input type="text" name="name" class="form-control rounded" placeholder="Името на продуктот.." required> 
+                            <input type="text" class="form-control rounded" name="name" placeholder="Името на продуктот.." required> 
                           </div>
                           <div class="col-6">
                             <label class="form-label">Избери слика</label>
-                            <input type="file" name="file" class="form-control rounded" required>
+                            <input type="file" class="form-control rounded name="image" required>
                           </div>
                         </div>
                         <div class="row">
                           <div class="col-6">
                             <label>Цена</label>
-                            <input type="text" name="price" class="form-control rounded" placeholder="Цена на производ.." required> 
+                            <input type="text" class="form-control rounded" name="price" placeholder="Цена на производ.." required> 
                           </div>
                           <div class="col-6">
                             <label>Краток опис</label>
-                            <input type="text" name="short_description" class="form-control rounded" placeholder="Кратко објаснување.." required> 
+                            <input type="text" class="form-control rounded" name="short_description" placeholder="Кратко објаснување.." required> 
                           </div>
                         </div>
                          <div class="row">
@@ -92,10 +93,8 @@
                              <label>Одберете модел</label>
                             <select class="form-control" name="car_id">
                               @foreach ($cars as $car)
-                                <option value="{{$car->model_name}}">{{$car->model_name}}</option>
+                                <option value="{{$car->id}}">{{$car->model_name}}</option>
                               @endforeach
-
-                              
                             </select>
                             <label style="margin-top: 13.5px;">Дали продуктот е на попуст?</label>
                             <select class="form-control" name="featured">
@@ -111,7 +110,7 @@
                          </div>
                          <div class="row">
                            <div class="col-12">
-                            <input type="submit" class="btn btn-primary rounded mt-4" value="Постави нов модел">
+                            <input type="submit" class="btn btn-primary rounded mt-4" value="Постави нов модел" name="submit">
                            </div>
                          </div>
                       </form>

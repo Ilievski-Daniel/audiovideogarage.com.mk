@@ -70,7 +70,7 @@
         <div class="col-lg-3 col-sm-6 mb-4">
           <div class="card border-0 shadow rounded-xs pt-5 text-center">
             <div class="card-body">
-                <img src="{{ url('storage/app/'. $multimedia->id) }}" alt="Car Model photo"/>
+                {{-- <img src="{{asset('/storage/images/multimedias/' . $car->image)}}" alt="Car Model photo"/> --}}
                 <h4 class="mt-4 mb-4 font-weight-bold">{{$multimedia->name}}</h4>
                 <p class="mt-2 mb-2">{{$multimedia->short_description}}</p>
                 <p class="mt-2 mb-4">{{$multimedia->price}}</p>

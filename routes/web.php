@@ -13,6 +13,7 @@ Route::view('add-model','add-model');
 Route::view('contact','contact');
 Route::get('models',[CarController::class, 'index']);
 Route::post('add-model',[CarController::class, 'store']);
+Route::post('add-multimedia',[MultimediaController::class, 'store']);
 Route::get('car-model/{id}',[MultimediaController::class, 'show']);
 Auth::routes();
 

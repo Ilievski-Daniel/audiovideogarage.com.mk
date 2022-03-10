@@ -5,12 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+
+
 class Multimedia extends Model
 {
-    use HasFactory;
-    protected $table = 'multimedias';
-
+    public $fillable = ['image'];
+    
     public function car(){
         return $this->belongsTo(Car::class);
     }
+
+    protected $table = 'multimedias';
+
+    use HasFactory;
 }

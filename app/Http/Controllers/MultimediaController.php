@@ -23,4 +23,28 @@ class MultimediaController extends Controller
         return view('car-model')
         ->with('multimedias', $multimedias);
     }
+
+    public function store(Request $request)
+    {
+        // $input = $request->all();
+        // if($request->hasFile('image')){
+        //     $destination_path = 'public/images/multimedias';
+        //     $image = $request->file('image');
+        //     $image_name = $image->getClientOriginalName();
+        //     $path = $request->file('image')->storeAs($destination_path, $image_name);
+
+        //     $input['image'] = $image_name;
+        // }
+
+        $multimedia = new Multimedia;
+        $multimedia->name = $request->name;
+        $multimedia->image = "demo";
+        $multimedia->price = $request->price;
+        $multimedia->short_description = $request->short_description;
+        $multimedia->long_description = $request->long_description;
+        $multimedia->car_id = $request->car_id;
+        $multimedia->featured = $request->featured;
+        $multimedia->save();
+        return redirect('/');
+    }
 }
