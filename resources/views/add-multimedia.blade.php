@@ -90,21 +90,23 @@
                          <div class="row">
                            <div class="col-6">
                              <label>Одберете модел</label>
-                            <select class="form-control">
-                              <option value="#">1</option>
-                              <option value="#">2</option>
-                              <option value="#">3</option>
+                            <select class="form-control" name="car_id">
+                              @foreach ($cars as $car)
+                                <option value="{{$car->model_name}}">{{$car->model_name}}</option>
+                              @endforeach
+
+                              
                             </select>
                             <label style="margin-top: 13.5px;">Дали продуктот е на попуст?</label>
-                            <select class="form-control">
-                              <option value="#">Не</option>
-                              <option value="#">Да</option>
+                            <select class="form-control" name="featured">
+                              <option value="0">Не</option>
+                              <option value="1">Да</option>
                             </select>
            
                            </div>
                            <div class="col-6">
                              <label>Долг опис</label>
-                             <textarea class="w-100" rows="5" placeholder="Внесете подолго објаснување"></textarea>
+                             <textarea class="w-100" rows="5" placeholder="Внесете подолго објаснување" name="long_description"></textarea>
                             </div>
                          </div>
                          <div class="row">
