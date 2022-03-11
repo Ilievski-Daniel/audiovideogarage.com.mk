@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\DB;
 use App\Models\Car;
+use App\Models\Multimedia;
 
 class CarController extends Controller
 {
@@ -76,6 +77,15 @@ class CarController extends Controller
         ->with('cars', $cars);
     }
 
+    public function showPanel()
+    {
+        $cars = Car::all();
+        $multimedias = Multimedia::all();
+        return view('home')
+        ->with('cars', $cars)
+        ->with('multimedias', $multimedias);
+    }
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -107,6 +117,7 @@ class CarController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Car::find($id)->delete();
+        return redirect()->back();
     }
 }
