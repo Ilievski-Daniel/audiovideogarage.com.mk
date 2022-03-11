@@ -34,19 +34,19 @@ class MultimediaController extends Controller
 
     public function store(Request $request)
     {
-        // $input = $request->all();
-        // if($request->hasFile('image')){
-        //     $destination_path = 'public/images/multimedias';
-        //     $image = $request->file('image');
-        //     $image_name = $image->getClientOriginalName();
-        //     $path = $request->file('image')->storeAs($destination_path, $image_name);
+        $input = $request->all();
+        if($request->hasFile('image')){
+            $destination_path = 'public/images/multimedias';
+            $image = $request->file('image');
+            $image_name = $image->getClientOriginalName();
+            $path = $request->file('image')->storeAs($destination_path, $image_name);
 
-        //     $input['image'] = $image_name;
-        // }
+            $input['image'] = $image_name;
+        }
 
         $multimedia = new Multimedia;
         $multimedia->name = $request->name;
-        $multimedia->image = "demo";
+        $multimedia->image = $image_name;
         $multimedia->price = $request->price;
         $multimedia->short_description = $request->short_description;
         $multimedia->long_description = $request->long_description;

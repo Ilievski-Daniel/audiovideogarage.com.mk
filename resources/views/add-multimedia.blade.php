@@ -75,7 +75,7 @@
                           </div>
                           <div class="col-6">
                             <label class="form-label">Избери слика</label>
-                            <input type="file" class="form-control rounded name="image" required>
+                            <input type="file" name="image" class="form-control rounded"  required>
                           </div>
                         </div>
                         <div class="row">
