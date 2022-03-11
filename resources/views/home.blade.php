@@ -32,7 +32,7 @@
                           <tr>
                             <th scope="row"><center>{{$car->id}}</center></th>
                             <td><center>{{$car->model_name}}</center></td>
-                            <td><center>📝</center></td>
+                            <td><center><a href="{{url('edit-model/'.$car->id)}}">📝</a></center></td>
                             <td>
                                 <center><form action="{{url('/delete-model/'.$car->id)}}" method="POST">
                                     {{ method_field('DELETE') }}

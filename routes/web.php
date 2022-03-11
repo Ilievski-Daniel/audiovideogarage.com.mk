@@ -6,6 +6,8 @@ use App\Http\Controllers\MultimediaController;
 
 Route::delete('/delete-model/{id}', 'App\Http\Controllers\CarController@destroy');
 Route::delete('/delete-multimedia/{id}', 'App\Http\Controllers\MultimediaController@destroy');
+Route::get('/edit-model/{id}', 'App\Http\Controllers\CarController@edit');
+Route::post('edit-model/{id}', 'App\Http\Controllers\CarController@update');
 Route::view('login','login');
 Route::get('add-multimedia',[CarController::class, 'show']);
 Route::get('/',[MultimediaController::class, 'index']);

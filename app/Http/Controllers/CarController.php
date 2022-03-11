@@ -94,7 +94,13 @@ class CarController extends Controller
      */
     public function edit($id)
     {
-        //
+        $cars = Car::all();
+        $multimedias = Multimedia::all();
+        $car = Car::find($id);
+        return view('edit-model')
+        ->with('car', $car)
+        ->with('cars', $cars)
+        ->with('multimedias', $multimedias);
     }
 
     /**
@@ -106,7 +112,20 @@ class CarController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $input = $request->all();
+        if($request->hasFile('image')){
+            $destination_path = 'public/images/cars';
+            $image = $request->file('image');
+            $image_name = $image->getClientOriginalName();
+            $path = $request->file('image')->storeAs($destination_path, $image_name);
+
+            $input['image'] = $image_name;
+        }
+        $car = Car::find($id);
+        $car->model_name = $request->model_name;
+        $car->image = $image_name;
+        $car->save();
+        return redirect('home');
     }
 
     /**
