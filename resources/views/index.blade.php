@@ -152,23 +152,14 @@
           @foreach($multimedias as $multimedia)
           <div class="col-lg-3 col-md-6 col-sm-6 features4-grid mt-4">
             <div class="features4-grid-inn">
-              <div class="img-featured">
-                <div class="ch-item ch-img-1">
-                  <div class="ch-info-wrap">
-                    <div class="ch-info">
-                      {{-- The multimedia->id is for a joke here just to have different image numbers xD --}}
-                      <div class="ch-info-front ch-img-{{$multimedia->id}}"></div>
-                      <div class="ch-info-back">
-                        <h4>{{$multimedia->price}} ден</h4>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
               <div class="features4-rightinfo">
+                <img class="mb-4" height="100vh" src="{{asset('/storage/images/multimedias/' . $multimedia->image)}}" alt="Featured image">
                 <h5><a href="#">{{$multimedia->name}}</a></h5>
-                <p>{{$multimedia->short_description}}</p>
+                @foreach($cars as $car)
+                @if($car->id == $multimedia->car_id)
+                <p>За {{$car->model_name}}</p>
+                @endif
+                @endforeach
                 <a href="#" class="btn btn-style btn-primary mt-md-2 mt-2">Избери</a>
               </div>
             </div>
