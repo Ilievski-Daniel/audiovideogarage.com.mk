@@ -68,7 +68,13 @@
                                         <th scope="row"><center>{{$multimedia->id}}</center></th>
                                         <td><center>{{$multimedia->name}}</center></td>
                                         <td><center>📝</center></td>
-                                        <td><center>🗑️</center></td>
+                                        <td>
+                                            <center><form action="{{url('/delete-multimedia/'.$multimedia->id)}}" method="POST">
+                                                {{ method_field('DELETE') }}
+                                                {{ csrf_field() }}
+                                                <button style="border: 0ch; background-color: inherit;">🗑️</button>
+                                            </form></center>
+                                        </td>
                                     </tr>
                                     </tbody> 
                             @endif                        

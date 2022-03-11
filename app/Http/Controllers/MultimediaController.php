@@ -53,6 +53,13 @@ class MultimediaController extends Controller
         $multimedia->car_id = $request->car_id;
         $multimedia->featured = $request->featured;
         $multimedia->save();
-        return redirect('/');
+        return redirect('home');
     }
+
+    public function destroy($id)
+    {
+        Multimedia::find($id)->delete();
+        return redirect()->back();
+    }
+
 }
