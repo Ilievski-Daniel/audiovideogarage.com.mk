@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 Use App\Models\Multimedia;
+Use App\Models\Car;
 use Illuminate\Http\Request;
 
 class MultimediaController extends Controller
@@ -60,6 +61,17 @@ class MultimediaController extends Controller
     {
         Multimedia::find($id)->delete();
         return redirect()->back();
+    }
+
+    public function edit($id)
+    {
+        $cars = Car::all();
+        $multimedias = Multimedia::all();
+        $multimedia = Multimedia::find($id);
+        return view('edit-multimedia')
+        ->with('multimedia', $multimedia)
+        ->with('cars', $cars)
+        ->with('multimedias', $multimedias);
     }
 
 }

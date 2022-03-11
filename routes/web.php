@@ -4,19 +4,29 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CarController; 
 use App\Http\Controllers\MultimediaController;
 
-Route::delete('/delete-model/{id}', 'App\Http\Controllers\CarController@destroy');
-Route::delete('/delete-multimedia/{id}', 'App\Http\Controllers\MultimediaController@destroy');
-Route::get('/edit-model/{id}', 'App\Http\Controllers\CarController@edit');
-Route::post('edit-model/{id}', 'App\Http\Controllers\CarController@update');
+// Public routes
 Route::view('login','login');
-Route::get('add-multimedia',[CarController::class, 'show']);
-Route::get('/',[MultimediaController::class, 'index']);
-Route::view('add-model','add-model');
 Route::view('contact','contact');
+Route::get('/',[MultimediaController::class, 'index']);
 Route::get('models',[CarController::class, 'index']);
-Route::post('add-model',[CarController::class, 'store']);
-Route::post('add-multimedia',[MultimediaController::class, 'store']);
 Route::get('car-model/{id}',[MultimediaController::class, 'show']);
-Route::get('home',[CarController::class, 'showPanel']);
 Route::get('car-multimedia/{id}',[MultimediaController::class, 'showMultimedia']);
+
+Route::middleware(['auth'])->group(function () {
+    // Routes for admin-dashboard
+    Route::view('home','home');
+    Route::get('home',[CarController::class, 'showPanel']);
+    // Routes for car models 
+    Route::view('add-model','add-model');
+    Route::post('add-model',[CarController::class, 'store']);
+    Route::get('/edit-model/{id}', 'App\Http\Controllers\CarController@edit');
+    Route::post('edit-model/{id}', 'App\Http\Controllers\CarController@update');
+    Route::delete('/delete-model/{id}', 'App\Http\Controllers\CarController@destroy');
+    // Routes for multimedias 
+    Route::get('add-multimedia',[CarController::class, 'show']);
+    Route::post('add-multimedia',[MultimediaController::class, 'store']);
+    Route::get('/edit-multimedia/{id}', 'App\Http\Controllers\MultimediaController@edit');
+    Route::delete('/delete-multimedia/{id}', 'App\Http\Controllers\MultimediaController@destroy');
+});
+
 Auth::routes();
