@@ -75,8 +75,7 @@
                         <h6>Погледни видео</h6>
                       </a>
                       <div id="small-dialog" class="zoom-anim-dialog mfp-hide">
-                        <iframe src="https://player.vimeo.com/video/425349644" allow="autoplay; fullscreen"
-                          allowfullscreen=""></iframe>
+                        <iframe width="1280" height="720" src="https://www.youtube.com/embed/oXyh94x3Lb0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                       </div>
                     </div>
                   </div>
