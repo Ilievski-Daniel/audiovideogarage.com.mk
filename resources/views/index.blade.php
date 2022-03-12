@@ -114,31 +114,9 @@
     </div>
   </section>
   <!-- //banner-slider-->
-  <!-- //bottom-grids -->
-  <section class="w3l-content-3" id="about">
-    <div class="content-3-mian py-5">
-      <div class="container py-lg-5">
-        <div class="content-info-in row">
-          <div class="col-lg-6">
-            <image img src="/images/ab1.jpg" alt="" class="img-fluid"></image>
-          </div>
-          <div class="col-lg-6 mt-lg-0 mt-5 about-right-faq align-self  pl-lg-5">
-            <div class="title-content text-left mb-2">
-              <h6 class="sub-title"><strong>За нас</strong></h6>
-              <h3 class="hny-title"> Audio Video Garage</h3>
-            </div>
-            <p class="mt-3">Ние во ID COM се идентификуваме со потребите и очекувањата на нашите купувачи и знаеме дека секогаш постои подобар начин да се исполнат нивните очекувања. <br><br> 
-              Нашите напори и енергија се константно фокусирани на потребите на нашите купувачи и веруваме дека слушањето на желбите на купувачите и водењето грижа за секој детал на производите е единствениот начин да ја оствариме нашата цел, а тоа е 100 % задоволни купувачи. 
-              <br><br>Вистинските артикли, достава на време и висок квалитет на постпродажна услуга е нашата работна филозофија.</p>
-            <a href="/contact" class="btn btn-style btn-primary mt-md-5 mt-4">Контакт</a>
-          </div>
-        </div>
-      </div>
-  </section>
-
-
+  
+  <!-- Featured products on sale section -->
   @if(isset($multimedias))
-  <!-- /features-4 -->
   <section class="features-4" id="featured">
     <div class="features4-block py-5">
       <div class="container py-lg-4">
@@ -175,6 +153,29 @@
     <br><br>
   </section>
   @endif
+
+  <!-- About us section -->
+  <section class="w3l-content-3" id="about">
+    <div class="content-3-mian py-5">
+      <div class="container py-lg-5">
+        <div class="content-info-in row">
+          <div class="col-lg-6">
+            <image img src="/images/ab1.jpg" alt="" class="img-fluid"></image>
+          </div>
+          <div class="col-lg-6 mt-lg-0 mt-5 about-right-faq align-self  pl-lg-5">
+            <div class="title-content text-left mb-2">
+              <h6 class="sub-title"><strong>За нас</strong></h6>
+              <h3 class="hny-title"> Audio Video Garage</h3>
+            </div>
+            <p class="mt-3">Ние во ID COM се идентификуваме со потребите и очекувањата на нашите купувачи и знаеме дека секогаш постои подобар начин да се исполнат нивните очекувања. <br><br> 
+              Нашите напори и енергија се константно фокусирани на потребите на нашите купувачи и веруваме дека слушањето на желбите на купувачите и водењето грижа за секој детал на производите е единствениот начин да ја оствариме нашата цел, а тоа е 100 % задоволни купувачи. 
+              <br><br>Вистинските артикли, достава на време и висок квалитет на постпродажна услуга е нашата работна филозофија.</p>
+            <a href="/contact" class="btn btn-style btn-primary mt-md-5 mt-4">Контакт</a>
+          </div>
+        </div>
+      </div>
+  </section>
+
   <footer class="w3l-footer-66">
     <section class="footer-inner-main">
       <div class="below-section">
