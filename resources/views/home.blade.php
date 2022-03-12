@@ -56,7 +56,7 @@
                             <thead>
                             <tr>
                                 <th scope="col"><center>#</center></th>
-                                <th scope="col"><center>Модел</center></th>
+                                <th scope="col"><center>Мултимедија</center></th>
                                 <th scope="col"><center>Промена</center></th>
                                 <th scope="col"><center>Избриши</center></th>
                             </tr>

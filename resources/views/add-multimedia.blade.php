@@ -110,7 +110,7 @@
                          </div>
                          <div class="row">
                            <div class="col-12">
-                            <input type="submit" class="btn btn-primary rounded mt-4" value="Постави нов модел" name="submit">
+                            <input type="submit" class="btn btn-primary rounded mt-4" value="Постави нов продукт" name="submit">
                            </div>
                          </div>
                       </form>
