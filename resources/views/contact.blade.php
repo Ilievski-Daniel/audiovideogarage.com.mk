@@ -98,38 +98,8 @@
 				  </div>
 
           <div class="col-lg-6 form-inner-cont">
-            <div class="title-content text-left">
-              <h3 style="margin-top: 4vh;" class="hny-title mb-lg-5 mb-4 ">Испратете ни порака</h3>
-            </div>
-            
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11861.831903484672!2d21.58255993465574!3d41.990445850000015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135438cc4cde9f7f%3A0x7cfeb9106e50ef0f!2sGostilnica%20Doma!5e0!3m2!1sen!2smk!4v1647089530708!5m2!1sen!2smk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             {{-- Contact form --}}
-            <form action="" method="post" >
-
-              <div style="margin-bottom: 2vh;">
-                <h6 style="margin-bottom: 1vh;"> Име: </h6>
-                <input type="text" name="name" placeholder="Вашето име..">
-              </div>
-
-              <div class="row con-two">
-                <div class="col-lg-6 form-input" style="margin-bottom: 2vh;">
-                  <h6 style="margin-bottom: 1vh;"> Емаил адреса: </h6>
-                  <input type="email" name="email" placeholder="Вашата емаил адреса..">
-                </div>
-                <div class="col-lg-6 form-input">
-                  <h6 style="margin-bottom: 1vh;"> Наслов: </h6>
-                  <input type="text" name="subject" placeholder="Наслов на пораката..">
-                </div>
-              </div>
-
-              <div class="form-input">
-                <h6 style="margin-bottom: 1vh;"> Порака: </h6>
-                <textarea placeholder="Вашата порака.." name="message"></textarea>
-              </div>
-
-              <div class="submit-button">
-                <button type="submit" class="btn btn-style">Испрати порака</button>
-              </div>
-            </form> 
           </div>
 			  </div>
 			</div>
