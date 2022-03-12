@@ -85,7 +85,7 @@
                           </div>
                           <div class="col-6">
                             <label>Краток опис</label>
-                            <input type="text" class="form-control rounded" name="short_description" value="{{$multimedia->short_description}}" placeholder="Кратко објаснување.." required> 
+                            <input type="text" class="form-control rounded" name="short_description" value="{{$multimedia->short_description}}" placeholder="Кратко објаснување.."> 
                           </div>
                         </div>
                          <div class="row">
@@ -112,7 +112,7 @@
                            </div>
                            <div class="col-6">
                              <label>Долг опис</label>
-                             <textarea class="w-100" rows="5" placeholder="Внесете подолго објаснување" name="long_description">{{$multimedia->long_description}}</textarea>
+                             <textarea class="w-100" rows="5" placeholder="Внесете подолго објаснување" name="long_description" required>{{$multimedia->long_description}}</textarea>
                             </div>
                          </div>
                          <div class="row">

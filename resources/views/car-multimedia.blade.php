@@ -66,12 +66,12 @@
       <div class="row">
         @foreach ($multimedias as $multimedia)
         <div class="col-12 col-md-6 pt-5 pl-5 pr-5 pb-md-5 mx-auto">
-          <img src="{{asset('/storage/images/multimedias/' . $multimedia->image)}}" class="w-100 d-block" alt="Multimedia Image">
+          <img style="height: 450px;" class="img-responsive" src="{{asset('/storage/images/multimedias/' . $multimedia->image)}}" class="w-100 d-block" alt="Multimedia Image">
         </div>
         <div class="col-12 col-md-6  pt-3 pt-md-5 px-5 pb-5">
             <h3 class="mt-4">{{$multimedia->name}}</h3>
             <p class="mt-4 mb-3">{{$multimedia->long_description}}</p>
-            <p style="display: inline;" class="h4 font-weight-bolder mt-4">Цена: <h4 style="display:inline;">{{$multimedia->price}}</h4>ден</p>
+            <p style="display: inline;" class="h4 font-weight-bolder mt-4">Цена: <h4 style="display:inline;">{{$multimedia->price}}</h4> ден</p>
             <a href="tel: 077640203"><button class="btn btn-success form-control mt-4">Нарачај веднаш</button></a>
         </div>
         @endforeach

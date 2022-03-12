@@ -54,14 +54,7 @@ class CarController extends Controller
         $car->image = $image_name;
         $car->save();
         
-        //Store image in storage/images
-        // $file = $request->file('file');
-        // $name = $file->hashName();
-        // $path = $request->file('file')->storeAs('images', $name);
-
-        // //Store image in database
-        
-        return redirect('/');
+        return redirect('home');
     }
 
     /**

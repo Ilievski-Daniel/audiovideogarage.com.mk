@@ -67,13 +67,13 @@
         </div>
         @foreach ($multimedias as $multimedia)
         @if (is_numeric($multimedia->id))
-        <div class="col-lg-3 col-sm-6 mb-4">
+        <div class="col-lg-4 col-sm-6 mb-4">
           <div class="card border-0 shadow rounded-xs pt-2 text-center">
             <div class="card-body">
-                <img height="100vh" width="100%" src="{{asset('/storage/images/multimedias/' . $multimedia->image)}}" alt="Car Model photo"/>
-                <h4 class="mt-4 mb-4 font-weight-bold">{{$multimedia->name}}</h4>
-                <p class="mt-2 mb-4">{{$multimedia->short_description}}</p>
-                <p class="mt-2 mb-4">{{$multimedia->price}} ден</p>
+                <img style="height: 240px;" class="img-responsive" src="{{asset('/storage/images/multimedias/' . $multimedia->image)}}" alt="Car Model photo"/>
+                <h4 class="mt-3 mb-4 font-weight-bold">{{$multimedia->name}}</h4>
+                <p class="mb-4">{{$multimedia->short_description}}</p>
+                <p class="mb-4">{{$multimedia->price}} ден</p>
                 <a href="/car-multimedia/{{$multimedia->id}}" class="car-models-button">Избери</a>
                 @php 
                 $key = 1
