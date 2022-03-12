@@ -30,8 +30,8 @@
                         @foreach ($cars as $car)                      
                         <tbody>
                           <tr>
-                            <th scope="row"><center>{{$car->id}}</center></th>
-                            <td><center>{{$car->model_name}}</center></td>
+                            <th scope="row"><a href="/car-model/{{$car->id}}"><center>{{$car->id}}</a></center></th>
+                            <td><center><a href="/car-model/{{$car->id}}">{{$car->model_name}}</a></center></td>
                             <td><center><a href="{{url('edit-model/'.$car->id)}}">📝</a></center></td>
                             <td>
                                 <center><form action="{{url('/delete-model/'.$car->id)}}" method="POST">
@@ -65,9 +65,9 @@
                             @if ($car->id == $multimedia->car_id)
                                 <tbody>
                                     <tr>
-                                        <th scope="row"><center>{{$multimedia->id}}</center></th>
-                                        <td><center>{{$multimedia->name}}</center></td>
-                                        <td><center>📝</center></td>
+                                        <th scope="row"><a href="/car-multimedia/{{$multimedia->id}}"><center>{{$multimedia->id}}</a></center></th>
+                                        <td><a href="/car-multimedia/{{$multimedia->id}}"><center>{{$multimedia->name}}</a></center></td>
+                                        <td><a href="/edit-multimedia/{{$multimedia->id}}"><center>📝</center></td>
                                         <td>
                                             <center><form action="{{url('/delete-multimedia/'.$multimedia->id)}}" method="POST">
                                                 {{ method_field('DELETE') }}
