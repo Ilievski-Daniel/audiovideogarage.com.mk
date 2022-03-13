@@ -66,7 +66,12 @@
       <div class="row">
         @foreach ($multimedias as $multimedia)
         <div class="col-12 col-md-6 pt-5 pl-5 pr-5 pb-md-5 mx-auto">
-          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <image img style="height: 400px;" class="d-block" src="{{asset('/storage/images/multimedias/' . $multimedia->image)}}" alt="First slide"></image>
@@ -78,6 +83,8 @@
                 <img style="height: 400px;" class="d-block w-100" src="{{asset('/storage/images3/cars/' . $multimedia->image3)}}" alt="Third slide">
               </div>
             </div>
+          </div>
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="sr-only">Previous</span>
@@ -88,6 +95,7 @@
             </a>
           </div>
         </div>
+        
         <div class="col-12 col-md-6  pt-3 pt-md-5 px-5 pb-5">
             <h3 class="mt-4">{{$multimedia->name}}</h3>
             <p class="mt-4 mb-3">{{$multimedia->long_description}}</p>
