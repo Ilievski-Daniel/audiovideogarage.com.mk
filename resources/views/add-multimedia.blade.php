@@ -74,7 +74,7 @@
                             <input type="text" class="form-control rounded" name="name" placeholder="Името на продуктот.." required> 
                           </div>
                           <div class="col-6">
-                            <label class="form-label">Избери слика</label>
+                            <label class="form-label">Избери главна слика</label>
                             <input type="file" name="image" class="form-control rounded"  required>
                           </div>
                         </div>
@@ -82,32 +82,37 @@
                           <div class="col-6">
                             <label>Цена</label>
                             <input type="text" class="form-control rounded" name="price" placeholder="Цена на производ.." required> 
-                          </div>
-                          <div class="col-6">
-                            <label>Краток опис</label>
-                            <input type="text" class="form-control rounded" name="short_description" placeholder="Кратко објаснување.."> 
-                          </div>
-                        </div>
-                         <div class="row">
-                           <div class="col-6">
-                             <label>Одберете модел</label>
+                            
+                            <label>Одберете марка </label>
                             <select class="form-control" name="car_id">
                               @foreach ($cars as $car)
                                 <option value="{{$car->id}}">{{$car->model_name}}</option>
                               @endforeach
                             </select>
-                            <label style="margin-top: 13.5px;">Дали продуктот е на попуст?</label>
+
+                            <label style="margin-top: 12px;">Дали модел</label>
                             <select class="form-control" name="featured">
                               <option value="0">Не</option>
                               <option value="1">Да</option>
                             </select>
-           
-                           </div>
-                           <div class="col-6">
-                             <label>Долг опис</label>
+
+                            <label style="margin-top: 12px;">Дали продуктот е на попуст?</label>
+                            <select class="form-control" name="featured">
+                              <option value="0">Не</option>
+                              <option value="1">Да</option>
+                            </select>
+                          </div>
+                          <div class="col-6">
+                            <label class="form-label">Избери втора слика</label>
+                            <input type="file" name="image2" class="form-control rounded"  required>
+
+                            <label class="form-label">Избери трета слика</label>
+                            <input type="file" name="image3" class="form-control rounded"  required>
+
+                            <label>Долг опис</label>
                              <textarea class="w-100" rows="5" placeholder="Внесете подолго објаснување" name="long_description" required></textarea>
-                            </div>
-                         </div>
+                          </div>
+                        </div>
                          <div class="row">
                            <div class="col-12">
                             <input type="submit" class="btn btn-primary rounded mt-4" value="Постави нов продукт" name="submit">
