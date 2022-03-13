@@ -69,7 +69,7 @@
         <div class="col-lg-4 col-sm-6 mb-4">
           <div class="card border-0 shadow rounded-xs pt-2 text-center">
             <div class="card-body">
-                <img style="height: 240px;" class="img-responsive" src="{{asset('/storage/images/cars/' . $category->image)}}" alt="Car Model photo"/>
+                <img style="height: 330px;" class="img-responsive" src="{{asset('/storage/images/cars/' . $category->image)}}" alt="Car Model photo"/>
                 <h4 class="mt-3 mb-4 font-weight-bold">{{$category->category_name}}</h4>
                 <a href="/car-model/{{$category->id}}" class="car-models-button">Избери</a>
                 @php 

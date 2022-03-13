@@ -70,7 +70,7 @@
         <div class="col-lg-4 col-sm-6 mb-4">
           <div class="card border-0 shadow rounded-xs pt-2 text-center">
             <div class="card-body">
-                <img style="height: 240px;" class="img-responsive" src="{{asset('/storage/images/multimedias/' . $multimedia->image)}}" alt="Car Model photo"/>
+                <img style="height: 280px;" class="img-responsive" src="{{asset('/storage/images/multimedias/' . $multimedia->image)}}" alt="Car Model photo"/>
                 <h4 class="mt-3 mb-4 font-weight-bold">{{$multimedia->name}}</h4>
                 <p class="mb-4">{{$multimedia->short_description}}</p>
                 <p class="mb-4">{{$multimedia->price}} ден</p>
