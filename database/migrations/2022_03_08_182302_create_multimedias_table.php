@@ -20,11 +20,12 @@ return new class extends Migration
                     ->onUpdate('cascade')
                     ->onDelete('cascade');
             $table->string('name');
-            $table->string('short_description');
             $table->text('long_description');
             $table->string('price');
             $table->integer('featured');
             $table->string('image');
+            $table->string('image2');
+            $table->string('image3');
             $table->timestamps();
         });
     }
