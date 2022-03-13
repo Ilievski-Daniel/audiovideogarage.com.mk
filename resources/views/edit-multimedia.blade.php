@@ -66,7 +66,7 @@
             <div class="col-lg-10 col-md-12 ">
                 <div class="card shadow-lg card-1">
                     <div class="card-body inner-card">
-                      <form action="add-multimedia" method="post" enctype="multipart/form-data">
+                      <form action="{{url('/edit-multimedia/'. $multimedia->id)}}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="row">
                           <div class="col-6">
@@ -74,7 +74,7 @@
                             <input type="text" class="form-control rounded" value="{{$multimedia->name}}" name="name" placeholder="Името на продуктот.." required> 
                           </div>
                           <div class="col-6">
-                            <label class="form-label">Избери слика</label>
+                            <label class="form-label">Избери главна слика</label>
                             <input type="file" name="image" class="form-control rounded" required>
                           </div>
                         </div>
@@ -84,40 +84,47 @@
                             <input type="text" class="form-control rounded" name="price" value="{{$multimedia->price}}"  placeholder="Цена на производ.." required> 
                           </div>
                           <div class="col-6">
-                            <label>Краток опис</label>
-                            <input type="text" class="form-control rounded" name="short_description" value="{{$multimedia->short_description}}" placeholder="Кратко објаснување.."> 
+                            <label class="form-label">Избери втора слика</label>
+                            <input type="file" name="image2" class="form-control rounded" required>
                           </div>
+                          
                         </div>
                          <div class="row">
                            <div class="col-6">
                              <label>Одберете марка</label>
-                            <select class="form-control" name="car_id">
-                              @foreach ($cars as $car)
-                                @if($car->id == $multimedia->car_id)
-                                    <option value="{{$car->id}}" selected>{{$car->model_name}}</option>
+                            <select class="form-control" name="category_id">
+                              @foreach ($categories as $category)
+                                @if($category->id == $multimedia->car_id)
+                                    <option value="{{$category->id}}" selected>{{$category->category_name}}</option>
                                 @else
-                                    <option value="{{$car->id}}">{{$car->model_name}}</option>
+                                    <option value="{{$category->id}}">{{$category->category_name}}</option>
                                 @endif
                               @endforeach
                             </select>
                             <label style="margin-top: 13.5px;">Дали продуктот е на попуст?</label>
                             <select class="form-control" name="featured">
                                 @if ($multimedia->featured == 0)
-                                    <option value="0">Не</option>
-                                @else
+                                    <option selected value="0">Не</option>
                                     <option value="1">Да</option>
+                                @else
+                                  <option value="0">Не</option>
+                                  <option selected value="1">Да</option>
                                 @endif
                             </select>
            
                            </div>
                            <div class="col-6">
+                            <label class="form-label">Избери трета слика</label>
+                            <input type="file" name="image3" class="form-control rounded" required>
+                          </div>
+                           <div class="col-12">
                              <label>Долг опис</label>
                              <textarea class="w-100" rows="5" placeholder="Внесете подолго објаснување" name="long_description" required>{{$multimedia->long_description}}</textarea>
                             </div>
                          </div>
                          <div class="row">
                            <div class="col-12">
-                            <input type="submit" class="btn btn-primary rounded mt-4" value="Постави нова марка" name="submit">
+                            <input type="submit" class="btn btn-primary rounded mt-4" value="Постави нова мултимедија" name="submit">
                            </div>
                          </div>
                       </form>

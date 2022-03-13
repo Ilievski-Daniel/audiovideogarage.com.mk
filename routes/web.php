@@ -34,6 +34,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('add-multimedia',[CarController::class, 'show']);
     Route::post('add-multimedia',[MultimediaController::class, 'store']);
     Route::get('/edit-multimedia/{id}', 'App\Http\Controllers\MultimediaController@edit');
+    Route::post('edit-multimedia/{id}', 'App\Http\Controllers\MultimediaController@update');
     Route::delete('/delete-multimedia/{id}', 'App\Http\Controllers\MultimediaController@destroy');
 });
 

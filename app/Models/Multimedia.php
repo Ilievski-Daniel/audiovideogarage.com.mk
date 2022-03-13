@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Multimedia extends Model
 {
-    public $fillable = ['image'];
+    public $fillable = ['image', 'category_id'];
     
     public function category(){
         return $this->belongsTo(Category::class);
