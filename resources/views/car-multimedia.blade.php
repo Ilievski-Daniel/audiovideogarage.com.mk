@@ -66,7 +66,27 @@
       <div class="row">
         @foreach ($multimedias as $multimedia)
         <div class="col-12 col-md-6 pt-5 pl-5 pr-5 pb-md-5 mx-auto">
-          <img style="height: 450px;" class="img-responsive" src="{{asset('/storage/images/multimedias/' . $multimedia->image)}}" class="w-100 d-block" alt="Multimedia Image">
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <image img style="height: 400px;" class="d-block" src="{{asset('/storage/images/multimedias/' . $multimedia->image)}}" alt="First slide"></image>
+              </div>
+              <div class="carousel-item">
+                <img style="height: 400px;" class="d-block" src="{{asset('/storage/images2/cars/' . $multimedia->image2)}}" alt="Second slide">
+              </div>
+              <div class="carousel-item">
+                <img style="height: 400px;" class="d-block w-100" src="{{asset('/storage/images3/cars/' . $multimedia->image3)}}" alt="Third slide">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
         </div>
         <div class="col-12 col-md-6  pt-3 pt-md-5 px-5 pb-5">
             <h3 class="mt-4">{{$multimedia->name}}</h3>
