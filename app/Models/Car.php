@@ -12,5 +12,9 @@ class Car extends Model
     public function multimedia(){
         return $this->hasMany(Multimedia::class);
     }
+
+    public function category(){
+        return $this->hasMany(Category::class);
+    }
     use HasFactory;
 }
