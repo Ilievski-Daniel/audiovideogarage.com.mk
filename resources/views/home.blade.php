@@ -28,8 +28,6 @@
                           </tr>
                         </thead>
                         @foreach ($cars as $car)                      
-                        @foreach ($categories as $category)
-                        @if($category->car_id == $car->id)
                         <tbody>
                           <tr>
                             <th scope="row"><a href="/car-category/{{$car->id}}"><center>{{$car->id}}</a></center></th>
@@ -44,8 +42,6 @@
                             </td>
                           </tr>
                         </tbody>
-                        @endif
-                        @endforeach
                         @endforeach
                       </table>
                     <br>
