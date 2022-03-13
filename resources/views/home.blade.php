@@ -45,8 +45,8 @@
                         @endforeach
                       </table>
                     <br>
-                    <a href="/models" type="button" class="btn btn-primary btn-lg btn-block">● Погледни ги сите модели</a>
-                    <a href="/add-model" type="button" class="btn btn-primary btn-lg btn-block">🚗 Додади нов модел на автомобил</a>
+                    <a href="/models" type="button" class="btn btn-primary btn-lg btn-block">● Погледни ги сите марки</a>
+                    <a href="/add-model" type="button" class="btn btn-primary btn-lg btn-block">🚗 Додади нова марка на автомобил</a>
                     <br>
                     <hr style="height:2px; border-width:0; color:red; background-color:red">
                         @foreach ($cars as $car)

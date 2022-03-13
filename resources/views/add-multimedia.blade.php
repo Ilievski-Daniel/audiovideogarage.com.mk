@@ -84,16 +84,16 @@
                             <input type="text" class="form-control rounded" name="price" placeholder="Цена на производ.." required> 
                             
                             <label>Одберете марка </label>
-                            <select class="form-control" name="car_id">
+                            <select required class="form-control" name="car_id">
                               @foreach ($cars as $car)
                                 <option value="{{$car->id}}">{{$car->model_name}}</option>
                               @endforeach
                             </select>
 
-                            <label style="margin-top: 12px;">Дали модел</label>
-                            <select class="form-control" name="featured">
-                              <option value="0">Не</option>
-                              <option value="1">Да</option>
+                            <label style="margin-top: 12px;">Одберете модел</label>
+                            <select  required class="form-control" name="">
+                              <option value="">niso</option>
+                              <option value="">niso</option>
                             </select>
 
                             <label style="margin-top: 12px;">Дали продуктот е на попуст?</label>
