@@ -20,7 +20,7 @@ class MultimediaController extends Controller
 
     public function show($id)
     {
-        $multimedias = Multimedia::where('car_id', $id)
+        $multimedias = Multimedia::where('category_id', $id)
         ->orderBy('price')
         ->get();
         return view('car-model')

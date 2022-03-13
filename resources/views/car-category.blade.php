@@ -65,17 +65,27 @@
         <div class="col-lg-12 text-center">
             <h2 class="section-title"></h2>
         </div>
-        @foreach ($cars as $car)
-        <div class="col-lg-3 col-sm-6 mb-4">
-            <div class="card border-0 shadow rounded-xs pt-5 text-center">
-                <div class="card-body">
-                    <img height="80vh" src="{{asset('/storage/images/cars/' . $car->image)}}" alt="Car Model photo"/>
-                    <h4 class="mt-4 mb-4 font-weight-bold">{{$car->model_name}}</h4>
-                    <a href="/car-category/{{$car->id}}" class="car-models-button">Избери</a>
-                </div>
+        @foreach ($categories as $category)
+        <div class="col-lg-4 col-sm-6 mb-4">
+          <div class="card border-0 shadow rounded-xs pt-2 text-center">
+            <div class="card-body">
+                {{-- <img style="height: 240px;" class="img-responsive" src="{{asset('/storage/images/multimedias/' . $multimedia->image)}}" alt="Car Model photo"/> --}}
+                <h4 class="mt-3 mb-4 font-weight-bold">{{$category->category_name}}</h4>
+                {{-- <p class="mb-4">{{$multimedia->short_description}}</p> --}}
+                {{-- <p class="mb-4">{{$multimedia->price}} ден</p> --}}
+                <a href="/car-model/{{$category->id}}" class="car-models-button">Избери</a>
+                {{-- @php 
+                $key = 1
+                @endphp --}}
             </div>
+          </div>
         </div>
         @endforeach
+
+        {{-- @if (!isset($key))
+        <script> alert('Известување! Не се достапни податоци за оваа марка, ве молиме одберете еден од понудените марки.'); 
+        window.location.href='/models';</script>
+        @endif --}}
     </div>
   </div>
 </body>

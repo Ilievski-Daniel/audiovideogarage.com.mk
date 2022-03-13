@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('multimedias', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('car_id')
+            $table->foreignId('category_id')
                     ->constrained()
                     ->onUpdate('cascade')
                     ->onDelete('cascade');

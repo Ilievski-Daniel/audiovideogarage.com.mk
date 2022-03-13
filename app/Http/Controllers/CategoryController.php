@@ -1,17 +1,19 @@
 <?php
 
 namespace App\Http\Controllers;
-
+Use App\Models\Multimedia;
+Use App\Models\Car;
+Use App\Models\Category;
 use Illuminate\Http\Request;
 
-class CategoriesController extends Controller
+class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id)
     {
         //
     }
@@ -45,7 +47,10 @@ class CategoriesController extends Controller
      */
     public function show($id)
     {
-        //
+        $categories = Category::where('car_id', $id)
+        ->get();
+        return view('car-category')
+        ->with('categories', $categories);
     }
 
     /**

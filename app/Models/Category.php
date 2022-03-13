@@ -11,6 +11,10 @@ class Category extends Model
         return $this->belongsTo(Car::class);
     }
 
+    public function multimedia(){
+        return $this->hasMany(Multimedia::class);
+    }
+
     protected $table = 'categories';
 
     use HasFactory;

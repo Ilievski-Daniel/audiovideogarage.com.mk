@@ -3,12 +3,14 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CarController; 
 use App\Http\Controllers\MultimediaController;
+use App\Http\Controllers\CategoryController;
 
 // Public routes
 Route::view('login','login');
 Route::view('contact','contact');
 Route::get('/',[MultimediaController::class, 'index']);
 Route::get('models',[CarController::class, 'index']);
+Route::get('car-category/{id}',[CategoryController::class, 'show']);
 Route::get('car-model/{id}',[MultimediaController::class, 'show']);
 Route::get('car-multimedia/{id}',[MultimediaController::class, 'showMultimedia']);
 

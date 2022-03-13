@@ -11,8 +11,8 @@ class Multimedia extends Model
 {
     public $fillable = ['image'];
     
-    public function car(){
-        return $this->belongsTo(Car::class);
+    public function category(){
+        return $this->belongsTo(Category::class);
     }
 
     protected $table = 'multimedias';
