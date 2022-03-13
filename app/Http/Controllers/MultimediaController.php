@@ -72,7 +72,7 @@ class MultimediaController extends Controller
         $multimedia->image3 = $image3_name;
         $multimedia->price = $request->price;
         $multimedia->long_description = $request->long_description;
-        $multimedia->car_id = $request->car_id;
+        $multimedia->category_id = $request->category_id;
         $multimedia->featured = $request->featured;
         $multimedia->save();
         return redirect('home');

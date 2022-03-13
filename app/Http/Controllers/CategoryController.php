@@ -36,7 +36,23 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $input = $request->all();
+        if($request->hasFile('image')){
+            $destination_path = 'public/images/cars';
+            $image = $request->file('image');
+            $image_name = $image->getClientOriginalName();
+            $path = $request->file('image')->storeAs($destination_path, $image_name);
+
+            $input['image'] = $image_name;
+        }
+
+        $category = new category;
+        $category->car_id = $request->car_id;
+        $category->category_name = $request->carCategory;
+        $category->image = $image_name;
+        $category->save();
+        
+        return redirect('home');
     }
 
     /**
@@ -53,6 +69,15 @@ class CategoryController extends Controller
         ->with('categories', $categories);
     }
 
+    public function showAdd()
+    {
+        $categories = Category::all();
+        $cars = Car::all();
+        return view('add-category')
+        ->with('categories', $categories)
+        ->with('cars', $cars);
+    }
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -61,7 +86,13 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        //
+        $cars = Car::all();
+        $multimedias = Multimedia::all();
+        $category = Category::find($id);
+        return view('edit-category')
+        ->with('cars', $cars)
+        ->with('category', $category)
+        ->with('multimedias', $multimedias);
     }
 
     /**
@@ -73,8 +104,22 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $input = $request->all();
+        if($request->hasFile('image')){
+            $destination_path = 'public/images/cars';
+            $image = $request->file('image');
+            $image_name = $image->getClientOriginalName();
+            $path = $request->file('image')->storeAs($destination_path, $image_name);
+
+            $input['image'] = $image_name;
+        }
+        $category = Category::find($id);
+        $category->category_name = $request->carCategory;
+        $category->image = $image_name;
+        $category->save();
+        return redirect('home');
     }
+
 
     /**
      * Remove the specified resource from storage.
@@ -84,6 +129,7 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Category::find($id)->delete();
+        return redirect()->back();
     }
 }

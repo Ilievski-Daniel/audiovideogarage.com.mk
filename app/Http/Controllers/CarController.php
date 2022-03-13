@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\DB;
 use App\Models\Car;
 use App\Models\Multimedia;
+use App\Models\Category;
 
 class CarController extends Controller
 {
@@ -66,17 +67,21 @@ class CarController extends Controller
     public function show()
     {
         $cars = Car::all();
+        $categories = Category::all();
         return view('add-multimedia')
-        ->with('cars', $cars);
+        ->with('cars', $cars)
+        ->with('categories', $categories);
     }
 
     public function showPanel()
     {
         $cars = Car::all();
         $multimedias = Multimedia::all();
+        $categories = Category::all();
         return view('home')
         ->with('cars', $cars)
-        ->with('multimedias', $multimedias);
+        ->with('multimedias', $multimedias)
+        ->with('categories', $categories);
     }
 
     /**

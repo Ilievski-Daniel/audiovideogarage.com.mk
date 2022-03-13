@@ -70,8 +70,8 @@
                         @csrf
                         <div class="row">
                           <div class="col-6">
-                            <label>Име на продукт</label>
-                            <input type="text" class="form-control rounded" name="name" placeholder="Името на продуктот.." required> 
+                            <label>Име на мултимедија</label>
+                            <input type="text" class="form-control rounded" name="name" placeholder="7 inch / 11 inch.." required> 
                           </div>
                           <div class="col-6">
                             <label class="form-label">Избери главна слика</label>
@@ -83,17 +83,11 @@
                             <label>Цена</label>
                             <input type="text" class="form-control rounded" name="price" placeholder="Цена на производ.." required> 
                             
-                            <label>Одберете марка </label>
-                            <select required class="form-control" name="car_id">
-                              @foreach ($cars as $car)
-                                <option value="{{$car->id}}">{{$car->model_name}}</option>
-                              @endforeach
-                            </select>
-
                             <label style="margin-top: 12px;">Одберете модел</label>
-                            <select  required class="form-control" name="">
-                              <option value="">niso</option>
-                              <option value="">niso</option>
+                            <select  required class="form-control" name="category_id">
+                              @foreach ($categories as $category)
+                                <option value="{{$category->id}}">{{$category->category_name}}</option>
+                              @endforeach
                             </select>
 
                             <label style="margin-top: 12px;">Дали продуктот е на попуст?</label>

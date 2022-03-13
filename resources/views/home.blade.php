@@ -28,10 +28,12 @@
                           </tr>
                         </thead>
                         @foreach ($cars as $car)                      
+                        @foreach ($categories as $category)
+                        @if($category->car_id == $car->id)
                         <tbody>
                           <tr>
-                            <th scope="row"><a href="/car-model/{{$car->id}}"><center>{{$car->id}}</a></center></th>
-                            <td><center><a href="/car-model/{{$car->id}}">{{$car->model_name}}</a></center></td>
+                            <th scope="row"><a href="/car-category/{{$car->id}}"><center>{{$car->id}}</a></center></th>
+                            <td><center><a href="/car-category/{{$car->id}}">{{$car->model_name}}</a></center></td>
                             <td><center><a href="{{url('edit-model/'.$car->id)}}">📝</a></center></td>
                             <td>
                                 <center><form action="{{url('/delete-model/'.$car->id)}}" method="POST">
@@ -42,11 +44,43 @@
                             </td>
                           </tr>
                         </tbody>
+                        @endif
+                        @endforeach
                         @endforeach
                       </table>
                     <br>
                     <a href="/models" type="button" class="btn btn-primary btn-lg btn-block">● Погледни ги сите марки</a>
                     <a href="/add-model" type="button" class="btn btn-primary btn-lg btn-block">🚗 Додади нова марка на автомобил</a>
+                    <br>
+                    <table class="table table-striped">
+                        <h6>Табела за преглед на модели: </h6>
+                        <br>
+                        <thead>
+                          <tr>
+                            <th scope="col"><center>#</center></th>
+                            <th scope="col"><center>Модел</center></th>
+                            <th scope="col"><center>Промена</center></th>
+                            <th scope="col"><center>Избриши</center></th>
+                          </tr>
+                        </thead>
+                        @foreach ($categories as $category)                      
+                        <tbody>
+                          <tr>
+                            <th scope="row"><a href="/car-model/{{$category->id}}"><center>{{$category->id}}</a></center></th>
+                            <td><center><a href="/car-model/{{$category->id}}">{{$category->category_name}}</a></center></td>
+                            <td><center><a href="{{url('edit-category/'.$category->id)}}">📝</a></center></td>
+                            <td>
+                                <center><form action="{{url('/delete-category/'.$category->id)}}" method="POST">
+                                    {{ method_field('DELETE') }}
+                                    {{ csrf_field() }}
+                                    <button style="border: 0ch; background-color: inherit;">🗑️</button>
+                                </form></center>
+                            </td>
+                          </tr>
+                        </tbody>
+                        @endforeach
+                      </table>
+                    <a href="/add-category" type="button" class="btn btn-primary btn-lg btn-block">📋 Додади нов модел на автомобил</a>
                     <br>
                     <hr style="height:2px; border-width:0; color:red; background-color:red">
                         @foreach ($cars as $car)
@@ -57,16 +91,20 @@
                             <tr>
                                 <th scope="col"><center>#</center></th>
                                 <th scope="col"><center>Мултимедија</center></th>
+                                <th scope="col"><center>Модел</center></th>
                                 <th scope="col"><center>Промена</center></th>
                                 <th scope="col"><center>Избриши</center></th>
                             </tr>
                             </thead>
+                            @foreach ($categories as $category)
                             @foreach ($multimedias as $multimedia)
-                            @if ($car->id == $multimedia->car_id)
+                            @if($car->id == $category->car_id)
+                            @if($multimedia->category_id == $category->id)
                                 <tbody>
                                     <tr>
                                         <th scope="row"><a href="/car-multimedia/{{$multimedia->id}}"><center>{{$multimedia->id}}</a></center></th>
                                         <td><a href="/car-multimedia/{{$multimedia->id}}"><center>{{$multimedia->name}}</a></center></td>
+                                        <th scope="row"><a href="/car-category/{{$category->id}}"><center>{{$category->category_name}}</a></center></th>
                                         <td><a href="/edit-multimedia/{{$multimedia->id}}"><center>📝</center></td>
                                         <td>
                                             <center><form action="{{url('/delete-multimedia/'.$multimedia->id)}}" method="POST">
@@ -77,7 +115,9 @@
                                         </td>
                                     </tr>
                                     </tbody> 
-                            @endif                        
+                            @endif 
+                            @endif
+                            @endforeach                       
                             @endforeach  
                             </table>  
                         @endforeach

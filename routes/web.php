@@ -18,6 +18,12 @@ Route::middleware(['auth'])->group(function () {
     // Routes for admin-dashboard
     Route::view('home','home');
     Route::get('home',[CarController::class, 'showPanel']);
+    // Routes for categories 
+    Route::get('add-category',[CategoryController::class, 'showAdd']);
+    Route::post('add-category',[CategoryController::class, 'store']);
+    Route::get('/edit-category/{id}', 'App\Http\Controllers\CategoryController@edit');
+    Route::post('edit-category/{id}', 'App\Http\Controllers\CategoryController@update');
+    Route::delete('/delete-category/{id}', 'App\Http\Controllers\CategoryController@destroy');
     // Routes for car models 
     Route::view('add-model','add-model');
     Route::post('add-model',[CarController::class, 'store']);
