@@ -93,7 +93,7 @@
                                     </div>
                                 </div>
     
-                                <div class="col-md-12 col-lg-12 col-auto ml-2"><input type="submit" class="btn btn-primary rounded" value="Постави нова марка"></div>
+                                <div class="col-md-12 col-lg-12 col-auto ml-2"><input type="submit" class="btn btn-primary rounded" value="Постави нов модел"></div>
                             </div>
                         </form> 
                     </div>
