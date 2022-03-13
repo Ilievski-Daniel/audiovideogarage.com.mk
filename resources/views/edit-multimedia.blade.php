@@ -42,7 +42,7 @@
               <a class="nav-link" href="/#featured"><strong>Модели на попуст</strong></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/models"><strong> Сите модели</strong></a>
+              <a class="nav-link" href="/models"><strong> Сите марки</strong></a>
             </li>
             <li class="nav-item">
               <a href="contact.html" class="btn btn-primary btn-style mr-2">Контакт</a>
@@ -90,7 +90,7 @@
                         </div>
                          <div class="row">
                            <div class="col-6">
-                             <label>Одберете модел</label>
+                             <label>Одберете марка</label>
                             <select class="form-control" name="car_id">
                               @foreach ($cars as $car)
                                 @if($car->id == $multimedia->car_id)
@@ -117,7 +117,7 @@
                          </div>
                          <div class="row">
                            <div class="col-12">
-                            <input type="submit" class="btn btn-primary rounded mt-4" value="Постави нов модел" name="submit">
+                            <input type="submit" class="btn btn-primary rounded mt-4" value="Постави нова марка" name="submit">
                            </div>
                          </div>
                       </form>

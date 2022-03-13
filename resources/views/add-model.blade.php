@@ -42,7 +42,7 @@
               <a class="nav-link" href="/#featured"><strong>Модели на попуст</strong></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/models"><strong> Сите модели</strong></a>
+              <a class="nav-link" href="/models"><strong> Сите марки</strong></a>
             </li>
             <li class="nav-item">
               <a href="contact.html" class="btn btn-primary btn-style mr-2">Контакт</a>
@@ -71,7 +71,7 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-6 col-md-6 col-sm-6">
                                     <div class="form-group ">
-                                        <label>Име на модел</label>
+                                        <label>Име на марка</label>
                                         <input type="text" name="carModel" class="form-control rounded" placeholder="Opel/BMW/Audi" required> 
                                     </div>
                                 </div>

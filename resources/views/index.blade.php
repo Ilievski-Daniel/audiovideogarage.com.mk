@@ -36,7 +36,7 @@
               <a class="nav-link" href="/#featured"><strong>Модели на попуст</strong></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/models"><strong> Сите модели</strong></a>
+              <a class="nav-link" href="/models"><strong> Сите марки</strong></a>
             </li>
             <li class="nav-item">
               <a href="/contact" class="btn btn-primary btn-style mr-2">Контакт</a>
@@ -67,7 +67,7 @@
                   <div class="banner-info-bg">
                     <h5>Audio Video Garage.</h5>
                     <div class="banner-buttons">
-                      <a class="btn btn-style btn-primary" href="/models">Сите модели</a>
+                      <a class="btn btn-style btn-primary" href="/models">Сите марки</a>
                       <a href="#small-dialog" class="popup-with-zoom-anim play-view">
                         <span class="video-play-icon">
                           <span class="fa fa-play"></span>

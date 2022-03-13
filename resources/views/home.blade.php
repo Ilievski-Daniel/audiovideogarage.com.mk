@@ -17,12 +17,12 @@
                     <br>
                     <br>
                     <table class="table table-striped">
-                        <h6>Табела за преглед на модели: </h6>
+                        <h6>Табела за преглед на марки: </h6>
                         <br>
                         <thead>
                           <tr>
                             <th scope="col"><center>#</center></th>
-                            <th scope="col"><center>Модел</center></th>
+                            <th scope="col"><center>Марка</center></th>
                             <th scope="col"><center>Промена</center></th>
                             <th scope="col"><center>Избриши</center></th>
                           </tr>

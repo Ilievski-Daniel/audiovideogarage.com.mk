@@ -71,7 +71,7 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-6 col-md-6 col-sm-6">
                                     <div class="form-group ">
-                                        <label>Име на модел</label>
+                                        <label>Име на марка</label>
                                         <input type="text" name="model_name" class="form-control rounded" placeholder="Opel/BMW/Audi" required value="{{$car->model_name}}">
                                     </div>
                                 </div>

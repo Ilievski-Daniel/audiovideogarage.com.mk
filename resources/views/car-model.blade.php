@@ -41,7 +41,7 @@
               <a class="nav-link" href="/#featured"><strong>Модели на попуст</strong></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/models"><strong> Сите модели</strong></a>
+              <a class="nav-link" href="/models"><strong> Сите марки</strong></a>
             </li>
             <li class="nav-item">
               <a href="/contact" class="btn btn-primary btn-style mr-2">Контакт</a>
@@ -85,7 +85,7 @@
         @endforeach
 
         @if (!isset($key))
-        <script> alert('Известување! Не се достапни податоци за овој модел, ве молиме одберете еден од понудените модели.'); 
+        <script> alert('Известување! Не се достапни податоци за оваа марка, ве молиме одберете еден од понудените марки.'); 
         window.location.href='/models';</script>
         @endif
     </div>
