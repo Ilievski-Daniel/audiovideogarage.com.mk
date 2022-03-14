@@ -70,10 +70,10 @@
         <div class="col-lg-4 col-sm-6 mb-4">
           <div class="card border-0 shadow rounded-xs pt-2 text-center">
             <div class="card-body">
-                <img style="height: 280px;" class="img-responsive" src="{{asset('/storage/images/multimedias/' . $multimedia->image)}}" alt="Car Model photo"/>
-                <h4 class="mt-3 mb-4 font-weight-bold">{{$multimedia->name}}</h4>
-                <p class="mb-4">{{$multimedia->short_description}}</p>
-                <p class="mb-4">{{$multimedia->price}} ден</p>
+              <a href="/car-multimedia/{{$multimedia->id}}"><img style="height: 280px;" class="img-responsive" src="{{asset('/storage/images/multimedias/' . $multimedia->image)}}" alt="Car Model photo"/></a>
+                <a href="/car-multimedia/{{$multimedia->id}}"><h4 class="mt-3 mb-2 font-weight-bold">{{$multimedia->name}}</h4></a>
+                <p class="mb-3">{{$multimedia->short_description}}</p>
+                <p style="font-weight: bolder; font-size: 105%; color:black" class="mb-4">{{$multimedia->price}} ден</p>
                 <a href="/car-multimedia/{{$multimedia->id}}" class="car-models-button">Избери</a>
                 @php 
                 $key = 1
