@@ -125,22 +125,27 @@
           <h3 class="hny-title">Модели на попуст</h3>
         </div>
         
-        <div class="row features4-grids text-left mt-lg-4">
+        <div class="row text-center mt-lg-4">
           @foreach($multimedias as $multimedia)
-          <div class="col-lg-3 col-md-6 col-sm-6 features4-grid mt-4">
+          @foreach($categories as $category)
+          @foreach($cars as $car)
+          @if($category->id == $multimedia->category_id)
+          @if($car->id == $category->car_id)
+          <div class="col-md-4 col-sm-6 features4-grid mt-4">
             <div class="features4-grid-inn">
               <div class="features4-rightinfo">
-                <img class="mb-4" height="100vh" src="{{asset('/storage/images/multimedias/' . $multimedia->image)}}" alt="Featured image">
-                <h5><a href="#">{{$multimedia->name}}</a></h5>
-                @foreach($cars as $car)
-                @if($car->id == $multimedia->car_id)
-                <p>За {{$car->model_name}}</p>
-                @endif
-                @endforeach
-                <a href="#" class="btn btn-style btn-primary mt-md-2 mt-2">Избери</a>
+                <a href="/car-multimedia/{{$multimedia->id}}"><img class="mb-3" height="200vh" src="{{asset('/storage/images/multimedias/' . $multimedia->image)}}" alt="Featured image"><a/>
+                <h5 class="mb-2"><a href="/car-multimedia/{{$multimedia->id}}">{{$multimedia->name}}</a></h5>
+                <p class="mb-2" style="font-weight: bolder; font-size: 105%; color:black">{{$car->model_name}} {{$category->category_name}}</p>
+                <p class="mb-2" style="font-weight: bolder; font-size: 105%; color:black">{{$multimedia->price}} ден</p>
+                <a href="/car-multimedia/{{$multimedia->id}}" class="btn btn-style btn-primary mt-md-2 mt-2">Избери</a>
               </div>
             </div>
           </div>
+          @endif
+          @endif
+          @endforeach
+          @endforeach
           @endforeach
         </div>
       </div>

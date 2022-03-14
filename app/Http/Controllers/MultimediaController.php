@@ -12,10 +12,12 @@ class MultimediaController extends Controller
     public function index()
     {
         $cars = Car::all();
+        $categories = Category::all();
         $multimedias = Multimedia::where('featured', 1)
         ->get();
         return view('index')
         ->with('cars', $cars)
+        ->with('categories', $categories)
         ->with('multimedias', $multimedias);
     }
 
