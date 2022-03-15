@@ -75,13 +75,13 @@
             </ol>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <image img style="height: 375px;" class="d-block w-100" src="{{asset('/storage/images/multimedias/' . $multimedia->image)}}" alt="First slide"></image>
+                <image img style="height: 50vh; object-fit: contain;" class="d-block w-100" src="{{asset('/storage/images/multimedias/' . $multimedia->image)}}" alt="First slide"></image>
               </div>
               <div class="carousel-item">
-                <img style="height: 375px;" class="d-block w-100" src="{{asset('/storage/images2/cars/' . $multimedia->image2)}}" alt="Second slide">
+                <img style="height: 50vh; object-fit: contain;" class="d-block w-100" src="{{asset('/storage/images2/cars/' . $multimedia->image2)}}" alt="Second slide">
               </div>
               <div class="carousel-item">
-                <img style="height: 375px;" class="d-block w-100" src="{{asset('/storage/images3/cars/' . $multimedia->image3)}}" alt="Third slide">
+                <img style="height: 50vh; object-fit: contain;" class="d-block w-100" src="{{asset('/storage/images3/cars/' . $multimedia->image3)}}" alt="Third slide">
               </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
