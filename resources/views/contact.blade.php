@@ -98,8 +98,7 @@
 				  </div>
 
           <div class="col-lg-6 form-inner-cont">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11861.831903484672!2d21.58255993465574!3d41.990445850000015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135438cc4cde9f7f%3A0x7cfeb9106e50ef0f!2sGostilnica%20Doma!5e0!3m2!1sen!2smk!4v1647089530708!5m2!1sen!2smk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            {{-- Contact form --}}
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d524.6524620514472!2d21.52688728726834!3d41.93837596430843!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13543d9a5b565a53%3A0x441c6e9b8fa95abf!2sAudio%20Video%20Garage!5e0!3m2!1sen!2smk!4v1648939508699!5m2!1sen!2smk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
 			  </div>
 			</div>
