@@ -93,13 +93,13 @@
                     <h5>Audio Video Garage.</h5>
                     <div class="banner-buttons">
                       <a class="btn btn-style btn-primary" href="/contact">Контакт</a>
-                      <a href="#small-dialog" class="popup-with-zoom-anim play-view">
+                      <a href="#small-dialog2" class="popup-with-zoom-anim play-view">
                         <span class="video-play-icon">
                           <span class="fa fa-play"></span>
                         </span>
                         <h6>Погледни видео</h6>
                       </a>
-                      <div id="small-dialog" class="zoom-anim-dialog mfp-hide">
+                      <div id="small-dialog2" class="zoom-anim-dialog mfp-hide">
                         <iframe src="https://www.facebook.com/plugins/video.php?height=315&href=https%3A%2F%2Fwww.facebook.com%2Fradia.caraudio%2Fvideos%2F481444396400089%2F&show_text=true&width=560&t=0" width="560" height="430" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
                       </div>
                     </div>
