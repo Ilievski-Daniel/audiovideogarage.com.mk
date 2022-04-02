@@ -36,7 +36,7 @@
               <a class="nav-link" href="/#featured"><strong>Модели на попуст</strong></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/models"><strong> Сите марки</strong></a>
+              <a class="nav-link" href="/models"><strong> Сите мултимедии</strong></a>
             </li>
             <li class="nav-item">
               <a href="/contact" class="btn btn-primary btn-style mr-2">Контакт</a>
