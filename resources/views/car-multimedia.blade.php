@@ -68,22 +68,32 @@
         <div class="col-12 col-md-6 pt-5 pb-md-5 mx-auto">
 
           <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
+              @if ($multimedia->image2 != '')
+              <ol class="carousel-indicators">
               <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
               <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              @if ($multimedia->image3 != '')
               <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              @endif
             </ol>
+            @endif
+            
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <image img style="height: 50vh; object-fit: contain;" class="d-block w-100" src="{{asset('/storage/images/multimedias/' . $multimedia->image)}}" alt="First slide"></image>
               </div>
+              @if ($multimedia->image2 != '')
               <div class="carousel-item">
                 <img style="height: 50vh; object-fit: contain;" class="d-block w-100" src="{{asset('/storage/images2/cars/' . $multimedia->image2)}}" alt="Second slide">
               </div>
+              @endif
+              @if ($multimedia->image3 != '')
               <div class="carousel-item">
                 <img style="height: 50vh; object-fit: contain;" class="d-block w-100" src="{{asset('/storage/images3/cars/' . $multimedia->image3)}}" alt="Third slide">
               </div>
+              @endif
             </div>
+            @if ($multimedia->image2 != '' || $multimedia->image3 != '')
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="sr-only">Previous</span>
@@ -92,8 +102,9 @@
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="sr-only">Next</span>
             </a>
-          </div>
-
+            @endif
+          </div> 
+          
           <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">

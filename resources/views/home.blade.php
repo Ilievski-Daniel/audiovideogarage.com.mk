@@ -100,7 +100,7 @@
                                     <tr>
                                         <th scope="row"><a href="/car-multimedia/{{$multimedia->id}}"><center>{{$multimedia->id}}</a></center></th>
                                         <td><a href="/car-multimedia/{{$multimedia->id}}"><center>{{$multimedia->name}}</a></center></td>
-                                        <th scope="row"><a href="/car-category/{{$category->id}}"><center>{{$category->category_name}}</a></center></th>
+                                        <th scope="row"><a href="/car-model/{{$category->id}}"><center>{{$category->category_name}}</a></center></th>
                                         <td><a href="/edit-multimedia/{{$multimedia->id}}"><center>📝</center></td>
                                         <td>
                                             <center><form action="{{url('/delete-multimedia/'.$multimedia->id)}}" method="POST">

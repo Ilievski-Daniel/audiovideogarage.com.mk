@@ -58,6 +58,10 @@ class MultimediaController extends Controller
 
             $input['image2'] = $image2_name;
         }
+        
+        if (!isset($image2_name)){
+            $image2_name = '';
+        }
 
         if($request->hasFile('image3')){
             $destination_path = 'public/images3/cars';
@@ -68,6 +72,10 @@ class MultimediaController extends Controller
             $input['image3'] = $image3_name;
         }
 
+        if (!isset($image3_name)){
+            $image3_name = '';
+        }
+        
         $multimedia = new Multimedia;
         $multimedia->name = $request->name;
         $multimedia->image = $image_name;
@@ -120,6 +128,10 @@ class MultimediaController extends Controller
 
             $input['image2'] = $image2_name;
         }
+        
+        if (!isset($image2_name)){
+            $image2_name = '';
+        }
 
         if($request->hasFile('image3')){
             $destination_path = 'public/images3/cars';
@@ -128,6 +140,10 @@ class MultimediaController extends Controller
             $path = $request->file('image3')->storeAs($destination_path, $image3_name);
 
             $input['image3'] = $image3_name;
+        }
+        
+        if (!isset($image3_name)){
+            $image3_name = '';
         }
 
         $multimedia = Multimedia::find($id);

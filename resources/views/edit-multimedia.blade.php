@@ -85,7 +85,7 @@
                           </div>
                           <div class="col-6">
                             <label class="form-label">Избери втора слика</label>
-                            <input type="file" name="image2" class="form-control rounded" required>
+                            <input type="file" name="image2" class="form-control rounded">
                           </div>
                           
                         </div>
@@ -115,7 +115,7 @@
                            </div>
                            <div class="col-6">
                             <label class="form-label">Избери трета слика</label>
-                            <input type="file" name="image3" class="form-control rounded" required>
+                            <input type="file" name="image3" class="form-control rounded">
                           </div>
                            <div class="col-12">
                              <label>Долг опис</label>

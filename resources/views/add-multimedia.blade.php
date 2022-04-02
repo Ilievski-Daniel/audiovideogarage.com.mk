@@ -98,10 +98,10 @@
                           </div>
                           <div class="col-6">
                             <label class="form-label">Избери втора слика</label>
-                            <input type="file" name="image2" class="form-control rounded"  required>
+                            <input type="file" name="image2" class="form-control rounded">
 
                             <label class="form-label">Избери трета слика</label>
-                            <input type="file" name="image3" class="form-control rounded"  required>
+                            <input type="file" name="image3" class="form-control rounded">
 
                             <label>Долг опис</label>
                              <textarea class="w-100" rows="5" placeholder="Внесете подолго објаснување" name="long_description" required></textarea>

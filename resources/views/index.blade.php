@@ -75,7 +75,7 @@
                         <h6>Погледни видео</h6>
                       </a>
                       <div id="small-dialog" class="zoom-anim-dialog mfp-hide">
-                        <iframe src="https://www.facebook.com/plugins/video.php?height=315&href=https%3A%2F%2Fwww.facebook.com%2Fradia.caraudio%2Fvideos%2F481444396400089%2F&show_text=true&width=560&t=0" width="560" height="430" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+                        <iframe src="https://www.facebook.com/plugins/video.php?height=322&href=https%3A%2F%2Fwww.facebook.com%2Fradia.caraudio%2Fvideos%2F307439621144812%2F&show_text=true&width=560&t=0" width="560" height="437" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
                       </div>
                     </div>
                   </div>
@@ -100,8 +100,7 @@
                         <h6>Погледни видео</h6>
                       </a>
                       <div id="small-dialog" class="zoom-anim-dialog mfp-hide">
-                        <iframe src="https://player.vimeo.com/video/425349644" allow="autoplay; fullscreen"
-                          allowfullscreen=""></iframe>
+                        <iframe src="https://www.facebook.com/plugins/video.php?height=315&href=https%3A%2F%2Fwww.facebook.com%2Fradia.caraudio%2Fvideos%2F481444396400089%2F&show_text=true&width=560&t=0" width="560" height="430" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
                       </div>
                     </div>
                   </div>

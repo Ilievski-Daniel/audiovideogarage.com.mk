@@ -66,10 +66,10 @@
             <h2 class="section-title"></h2>
         </div>
         @foreach ($categories as $category)
-        <div class="col-lg-4 col-sm-6 mb-4">
+        <div class="col-lg-3 col-sm-6 mb-3">
           <div class="card border-0 shadow rounded-xs pt-2 text-center">
             <div class="card-body">
-              <a href="/car-model/{{$category->id}}"><img style="height: 280px;" class="img-responsive" src="{{asset('/storage/images/cars/' . $category->image)}}" alt="Car Model photo"/></a>
+              <a href="/car-model/{{$category->id}}"><img style="height: 30vh; width:100%;" class="img-responsive" src="{{asset('/storage/images/cars/'. $category->image)}}" alt="Car Model photo"/></a>
                 <h4 class="mt-3 mb-4 font-weight-bold">{{$category->category_name}}</h4>
                 <a href="/car-model/{{$category->id}}" class="car-models-button">Избери</a>
                 @php 
