@@ -125,6 +125,12 @@
             
           </div>
         </div>
+        <style>
+          p{
+            white-space: pre-wrap;
+            overflow-wrap: break-word;
+          }
+          </style>
         <div class="col-12 col-md-6  pt-3 pt-md-5 px-5 pb-5">
             <h3 class="mt-4">{{$multimedia->name}}</h3>
             <p class="mt-4 mb-3">{{$multimedia->long_description}}</p>
